@@ -11,12 +11,12 @@ import "../Assets/Center.css"
 
 function App() {
   return (
-    <div className="container-fluid">
-      <div className="row mb-3">
+    <div className="center-content container-fluid">
+      <div className="row mb-4">
         <div className="col">
           <div className="d-flex justify-content-center mt-4">
             <div className="btn-group btn-group-custom" role="group" aria-label="Basic example">
-              <button type="button" className="btn me-4">
+              <button type="button" className="btn me-2">
                 <FontAwesomeIcon icon={faPlus} className="me-1" /> Yeni Şikayetler
               </button>
               <button type="button" className="btn me-2">
@@ -34,7 +34,7 @@ function App() {
           <div className="search-container d-flex align-items-center">
             <form className="d-flex align-items-center">
               <input
-                className="form-control search-input me-2"
+                className="form-control search-input me-1"
                 type="search"
                 placeholder="Axtar"
                 aria-label="Search"
@@ -89,7 +89,7 @@ function App() {
       </div>
       <div className="row">
         <div className="col text-start">
-          <p>Göstərilən: 0-0, cəmi 0 (0 səhifə)</p>
+          <p className="centered-paragraph">Göstərilən: 0-0, cəmi 0 (0 səhifə)</p>
         </div>
       </div>
     </div>

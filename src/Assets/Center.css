@@ -90,11 +90,24 @@
   }
 
   .search-container {
-    width: 80%; /* Adjust the width as needed */
+    width: 80%; 
   }
   
   .search-input {
     width: 100%;
   }
   
-  
+
+.btn-group-custom .btn {
+  max-width: 180px; 
+}
+
+
+/* Center.css */
+
+.centered-paragraph {
+  max-width: 600px; 
+  text-align: center; /* Center the text */
+}
+
+
