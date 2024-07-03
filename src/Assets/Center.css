@@ -2,11 +2,11 @@
 
 .container-fliud {
   margin-top: 20px;
-  width: 200px;
+  /* width: 200px; */
 }
 
 .form-control {
-  width: 90%; /* Adjust width as needed */
+  /* width: 90%; */
 }
 
 .table {
@@ -36,7 +36,7 @@
 .custom-table {
   border-radius: 10px; /* Adjust the value as needed */
   overflow: hidden; /* Ensures the border-radius applies correctly */
-  width: 80%;
+  width: 100%;
   /* max-width: 100%; */
 }
 
@@ -75,7 +75,7 @@
   
   /* App.css */
 .btn-group-custom {
-    width: 80%;
+    width: 100%;
     margin: 0 auto; /* Centers the buttons horizontally */
   }
   
@@ -90,7 +90,7 @@
   }
 
   .search-container {
-    width: 80%; 
+    width: 100%; 
   }
   
   .search-input {
@@ -106,8 +106,33 @@
 /* Center.css */
 
 .centered-paragraph {
-  max-width: 600px; 
+width:100%;
   text-align: center; /* Center the text */
 }
 
 
+.center-content {
+  width: 100%; /* Adjust the width percentage as per your design */
+  margin: 30px auto; /* Center the content horizontally */
+}
+
+
+.table th {
+  background-color: #3c6cb4;
+  color: white;
+}
+/* styles.css */
+
+.custom-table {
+  border-radius: 10px; /* Adjust the value as needed */
+}
+
+.btn {
+  background-color: #3c6cb4;
+  color: white;
+}
+
+.center-content{
+  width: 92%;
+  position: fixed;
+}

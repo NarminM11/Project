@@ -1,53 +1,89 @@
-import "../Assets/SideBar.css"; // Import your CSS file with animations
-import React from "react";
-import "@trendmicro/react-sidenav/dist/react-sidenav.css";
-import Center from './Center'
-import SideNav, {
-  Toggle,
-  Nav,
-  NavItem,
-  NavIcon,
-  NavText
-} from "@trendmicro/react-sidenav";
+import React, { useState } from "react";
+import {
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+  UploadOutlined,
+  UserOutlined,
+  VideoCameraOutlined,
+} from "@ant-design/icons";
+import { Button, Layout, Menu, theme } from "antd";
+import Center from "../Components/Center";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faPlus,
+  faBars,
+faHandPointer
+} from '@fortawesome/free-solid-svg-icons';
+const { Header, Sider, Content } = Layout;
 
-class SideNavBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isVisible: false // Start with sidebar closed
-    };
-  }
+const App = () => {
+  const [collapsed, setCollapsed] = useState(false);
+  const {
+    token: { colorBgContainer, borderRadiusLG },
+  } = theme.useToken();
 
-  render() {
-    return (
-      <div className={`container ${this.state.isVisible ? 'sidenav-expanded' : ''}`}>
-        <SideNav expanded={this.state.isVisible}>
-          <SideNav.Toggle
-            onClick={() => {
-              this.setState({ isVisible: !this.state.isVisible });
-            }}
+  return (
+    <div>
+      <Layout style={{ height: "100vh" }}>
+        <Sider trigger={null} collapsible collapsed={collapsed}>
+          <div className="demo-logo-vertical" />
+          <Menu
+            theme="dark"
+            mode="inline"
+            defaultSelectedKeys={["1"]}
+            items={[
+              {
+                key: "1",
+                icon:  <FontAwesomeIcon icon={faPlus} className="me-1" /> ,
+                label: "Yeni Şikayət Yarat",
+              },
+              {
+                key: "2",
+                icon: <FontAwesomeIcon icon={faBars} className="me-1" />,
+                label: "Şikayətlər",
+              },
+              {
+                key: "3",
+                icon: <FontAwesomeIcon icon={faHandPointer} className="me-1" />,
+                label: "İstehlakçı təcrübəsi sorğusu",
+              },
+            ]}
           />
-          <SideNav.Nav defaultSelected="home">
-            <NavItem eventKey="home">
-              <NavIcon>
-                <i className="fa fa-fw fa-home" style={{ fontSize: "1.75em" }} />
-              </NavIcon>
-              <NavText>Home</NavText>
-            </NavItem>
-            <NavItem eventKey="placed orders">
-              <NavIcon>
-                <i className="fa fa-fw fa-line-chart" style={{ fontSize: "1.75em" }} />
-              </NavIcon>
-              <NavText>Placed Orders</NavText>
-            </NavItem>
-          </SideNav.Nav>
-        </SideNav>
-        <div className="content">
-          {/* Main content here */}
-<Center/>        </div>
-      </div>
-    );
-  }
-}
+        </Sider>
+        <Layout>
+          <Header
+            style={{
+              padding: 0,
+              background: colorBgContainer,
+              height: "64px",
+            }}
+          >
+            <Button
+              type="text"
+              icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+              onClick={() => setCollapsed(!collapsed)}
+              style={{
+                fontSize: "16px",
+                width: 64,
+                height: 64,
+              }}
+            />
+          </Header>
+          <Content
+            style={{
+              margin: "24px 16px",
+              padding: 24,
+              minHeight: "calc(100vh - 64px - 48px)", // Adjust height to fit the viewport
+              background: colorBgContainer,
+              borderRadius: borderRadiusLG,
+            }}
+          >
+            <Center />
+          </Content>
+        </Layout>
+      </Layout>
+    </div>
+  );
+};
 
-export default SideNavBar;
+export default App;
