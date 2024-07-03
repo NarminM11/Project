@@ -1,25 +1,6 @@
-/* styles.css or your global CSS file */
-.container {
-    display: flex;
-  }
-  
-  .sidenav {
-    width: 250px; /* Sidebar width */
-    flex-shrink: 0; /* Prevent sidebar from shrinking */
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .sidenav-expanded .sidenav {
-    transform: translateX(0); /* Move sidebar into view */
-    opacity: 1; /* Make sidebar visible */
-  }
-  
-  .content {
-    flex: 1; /* Main content takes remaining space */
-    transition: margin-left 0.3s ease;
-  }
-  
-  .sidenav-expanded .content {
-    margin-left: 10px; /* Adjust margin to match sidebar width */
-  }
-  
+.custom-menu {
+  background-color: #d0d2d6;
+}
+.custom-menu .ant-menu-item {
+  color: black;
+}

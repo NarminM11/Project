@@ -1,138 +1,27 @@
-/* styles.css */
-
-.container-fliud {
-  margin-top: 20px;
-  /* width: 200px; */
-}
-
-.form-control {
-  /* width: 90%; */
-}
-
-.table {
-  margin-top: 20px;
-}
-
-.text-end {
-  text-align: right;
-}
-
-.btn-outline-success {
-  margin-left: 10px; /* Add margin between input and button */
-}
-/* styles.css */
-
-.table-custom {
-  width: 100%;
-  /* height: 300px; */
-}
 .table th {
-  vertical-align: middle;
   background-color: #3c6cb4;
   color: white;
+  height: 60px;
 }
-/* styles.css */
 
 .custom-table {
-  border-radius: 10px; /* Adjust the value as needed */
-  overflow: hidden; /* Ensures the border-radius applies correctly */
-  width: 100%;
-  /* max-width: 100%; */
-}
-
-/* styles.css */
-
-.button-group {
-  margin-bottom: 20px; /* Adjust spacing between button group and search bar */
-}
-
-.button-group .btn {
-  margin-right: 10px; /* Adjust spacing between buttons */
+  border-radius: 10px;
 }
 
 .btn {
   background-color: #3c6cb4;
   color: white;
 }
-
-/* App.css */
-.table-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  
-  .melumat-table{
-    width: 80%;
-
-  }
-
-  /* App.css */
-.btn-group-custom {
-    width: 30%;
-    margin: 0 auto; /* Centers the buttons horizontally */
-  }
-  
-  /* App.css */
-.btn-group-custom {
-    width: 100%;
-    margin: 0 auto; /* Centers the buttons horizontally */
-  }
-  
-  .search-input {
-    width: 30%; /* Adjust width as needed */
-    margin: 0 auto; /* Center the search input horizontally */
-  }
-  
-
-  .axtar{
-    width: 90%;
-  }
-
-  .search-container {
-    width: 100%; 
-  }
-  
-  .search-input {
-    width: 100%;
-  }
-  
-
-.btn-group-custom .btn {
-  max-width: 180px; 
+.btn:hover {
+  background-color: #3c6cb4;
+  color: white;
 }
-
-
-/* Center.css */
-
-.centered-paragraph {
-width:100%;
-  text-align: center; /* Center the text */
-}
-
 
 .center-content {
-  width: 100%; /* Adjust the width percentage as per your design */
-  margin: 30px auto; /* Center the content horizontally */
-}
-
-
-.table th {
-  background-color: #3c6cb4;
-  color: white;
-}
-/* styles.css */
-
-.custom-table {
-  border-radius: 10px; /* Adjust the value as needed */
-}
-
-.btn {
-  background-color: #3c6cb4;
-  color: white;
-}
-
-.center-content{
   width: 92%;
-  position: fixed;
+  position: fixed;
+}
+.custom-table {
+  border-radius: 10px;
+  overflow: hidden;
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../Assets/Navbar.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../Assets/Navbar.css";
 
 const Navbar = () => {
   return (
@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="d-flex align-items-center">
         <div className="me-3">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/149/149071.png" // Replace with the actual source of your profile picture
+            src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
             className="rounded-circle"
             width="30"
             height="30"
@@ -23,7 +23,7 @@ const Navbar = () => {
           />
         </div>
         <div>
-          <span className="fw-bold">Mürşüdova Nərmin Rauf qızı</span> {/* Replace with the actual username */}
+          <span>Mürşüdova Nərmin Rauf qızı</span>
         </div>
       </div>
     </nav>
