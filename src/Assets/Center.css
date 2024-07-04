@@ -1,27 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+body,
+button,
+input,
+select,
+textarea,
+table {
+  font-family: "Poppins", sans-serif;
+}
+
 .table th {
   background-color: #3c6cb4;
   color: white;
   height: 60px;
+  text-align: start;
+  vertical-align: middle;
 }
 
 .custom-table {
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .btn {
   background-color: #3c6cb4;
   color: white;
 }
+
 .btn:hover {
   background-color: #3c6cb4;
   color: white;
 }
 
 .center-content {
-  width: 92%;
-  position: fixed;
+  width: 100%;
+  padding: 30px;
+  margin: 0 auto;
+  position: relative;
 }
-.custom-table {
-  border-radius: 10px;
-  overflow: hidden;
+
+.text-center {
+  text-align: start;
+  vertical-align: middle;
 }

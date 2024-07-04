@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="d-flex align-items-center">
         <div className="me-3">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsCUNme8Tni4rSleVEs1VRLD29XPfLFv_LYA&s"
             className="rounded-circle"
             width="30"
             height="30"

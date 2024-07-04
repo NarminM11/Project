@@ -1,6 +1,13 @@
-.custom-menu {
-  background-color: #d0d2d6;
+.sidebar-item {
+  display: block;
 }
-.custom-menu .ant-menu-item {
-  color: black;
+
+.sidebar-icon {
+  min-width: 0;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.sidebar-text {
+  opacity: 1;
 }
