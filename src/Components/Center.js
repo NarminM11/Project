@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Assets/Center.css";
+import Navbar from '../Components/NavBar';
 
 function Center() {
   const [query, setQuery] = useState("");
@@ -24,6 +25,8 @@ function Center() {
     <div className="center-content container-fluid">
       <div className="row mb-4">
         <div className="col">
+        <Navbar/>
+
           <div className="d-flex mt-4 justify-content-between flex-wrap">
             <div
               className="btn-group btn-group-custom mb-3 mb-md-0"
@@ -44,10 +47,10 @@ function Center() {
             </div>
 
             <form className="d-flex align-items-center">
-              <div className="input-group">
+              <div className="input-group ">
                 <input
                   type="search"
-                  className="form-control search-input me-1"
+                  className="form-control search-input me-1 "
                   style={{ maxWidth: "80%" }}
                   placeholder="Axtar"
                   aria-label="Search"

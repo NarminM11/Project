@@ -12,8 +12,9 @@ const Navbar = () => {
           alt=""
         />
       </a>
-      <div className="d-flex align-items-center">
-        <div className="me-3">
+      <div className="ms-auto d-flex align-items-center">
+      <span>Mürşüdova Nərmin Rauf qızı</span>
+        <div className="ms-2">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsCUNme8Tni4rSleVEs1VRLD29XPfLFv_LYA&s"
             className="rounded-circle"
@@ -22,9 +23,7 @@ const Navbar = () => {
             alt="Profile"
           />
         </div>
-        <div>
-          <span>Mürşüdova Nərmin Rauf qızı</span>
-        </div>
+        <div></div>
       </div>
     </nav>
   );
