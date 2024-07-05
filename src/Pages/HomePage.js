@@ -2,13 +2,8 @@ import React from "react";
 import SideBar from "../Components/SideBar";
 import Center from "../Components/Center";
 import NavBar from "../Components/NavBar";
+import { Outlet } from "react-router-dom";
 
-export default function App() {
-  return (
-    <div>
-      {/* <NavBar /> */}
-
-      <SideBar />
-    </div>
-  );
+export default function HomePage() {
+  return <Outlet />;
 }

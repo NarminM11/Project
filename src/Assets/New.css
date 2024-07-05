@@ -1,0 +1,142 @@
+.new-header {
+  background-color: #3c6cb4;
+  color: white;
+  justify-content: center;
+  vertical-align: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.col-md-8,
+.col-md-4 {
+  padding: 15px;
+  border: 1px solid #dee2e6;
+  margin-bottom: 20px;
+}
+
+.new-header {
+  border-radius: 10px;
+}
+
+.new-header > div {
+  background-color: #3c6cb4;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.table-container {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #dee2e6;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.forms-container {
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.new-header {
+  margin-bottom: 20px;
+}
+
+.header-content {
+  background-color: #3c6cb4;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+}
+
+.forms-container {
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  background-color: #f8f9fa;
+  margin-top: 20px;
+}
+
+.new-header {
+  margin-bottom: 20px;
+}
+
+.header-content {
+  background-color: #3c6cb4;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.upload {
+  /* height: 100%; */
+  /* width: 100%; */
+  background-color: gainsboro;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  background-color: aqua;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container-fluid,
+.forms-container,
+.new-header,
+.header-content,
+.row,
+.col-md-24,
+.ant-form,
+.ant-row,
+.ant-col {
+  font-family: "Poppins", sans-serif;
+}

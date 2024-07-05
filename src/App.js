@@ -1,19 +1,18 @@
-import React from "react";
-import SideBar from "../src/Components/SideBar";
-import Center from "../src/Components/Center";
-import NavBar from "../src/Components/NavBar";
-import Home from '../src/Pages/HomePage';
-import NewComplaint from '../src/Pages/NewComplaint';
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { ROUTES } from './router/Router.jsx';
+
+const routes = createBrowserRouter(ROUTES);
 
 export default function App() {
   return (
-    <div>
-      {/* <NavBar /> */}
-<Home/>
-{/* <NewComplaint/>  */}
-{/* <Center/> */}
-      {/* <SideBar /> */}
-      
-    </div>
+    <RouterProvider router={routes} />
+    // <div>
+    //   <NavBar />
+    //   <Home />
+    //   <NewComplaint />
+    //   <Center />
+    //   <SideBar />
+    // </div>
   );
 }

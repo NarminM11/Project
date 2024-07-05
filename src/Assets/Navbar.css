@@ -6,3 +6,11 @@
 .navbar {
   padding: 10px 20px;
 }
+
+.navbar {
+  height: 90px;
+}
+
+.nav-word {
+  font-size: 20px;
+}

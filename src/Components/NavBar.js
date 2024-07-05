@@ -9,11 +9,13 @@ const Navbar = () => {
         <img
           src="https://e-complaint.icta.az/assets/imgs/gradient_black.png"
           className="d-inline-block align-top"
+          width="100%"
+          height="100%"
           alt=""
         />
       </a>
-      <div className="ms-auto d-flex align-items-center">
-      <span>Mürşüdova Nərmin Rauf qızı</span>
+      <div className="nav-word ms-auto d-flex align-items-center">
+        <span>Mürşüdova Nərmin Rauf qızı</span>
         <div className="ms-2">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsCUNme8Tni4rSleVEs1VRLD29XPfLFv_LYA&s"

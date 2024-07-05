@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Assets/Center.css";
-import Navbar from '../Components/NavBar';
+import Navbar from "../Components/NavBar";
 
 function Center() {
   const [query, setQuery] = useState("");
@@ -25,7 +25,7 @@ function Center() {
     <div className="center-content container-fluid">
       <div className="row mb-4">
         <div className="col">
-        <Navbar/>
+          <Navbar />
 
           <div className="d-flex mt-4 justify-content-between flex-wrap">
             <div

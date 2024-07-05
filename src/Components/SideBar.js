@@ -104,6 +104,7 @@
 
 
 
+
 import React, { useState } from "react";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import { Button, Layout, Menu as AntMenu, theme } from "antd";
@@ -115,6 +116,7 @@ import {
   faHandPointer,
 } from "@fortawesome/free-solid-svg-icons";
 import NavBar from "../Components/NavBar";
+import { Outlet } from "react-router-dom";
 
 const { Header, Sider, Content } = Layout;
 
@@ -217,7 +219,7 @@ const SideBar = () => {
               borderRadius: borderRadiusLG,
             }}
           > */}
-          <Center />
+          <Outlet/>
           {/* </Content> */}
         </Layout>
       </Layout>
