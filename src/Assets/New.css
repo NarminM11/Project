@@ -6,11 +6,7 @@
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-label {
-  margin-bottom: 8px;
-  font-weight: bold;
+  border-radius: 10px;
 }
 
 .form-select {
@@ -24,10 +20,6 @@ label {
   padding: 15px;
   border: 1px solid #dee2e6;
   margin-bottom: 20px;
-}
-
-.new-header {
-  border-radius: 10px;
 }
 
 .new-header > div {
@@ -66,12 +58,6 @@ label {
   border-radius: 10px 10px 0 0;
 }
 
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
 .form-select {
   width: 100%;
   padding: 8px;
@@ -102,7 +88,8 @@ label {
 label {
   display: block;
   margin-bottom: 8px;
-  font-weight: bold;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
 }
 
 .form-select {
@@ -121,10 +108,6 @@ label {
   text-align: center;
 }
 
-.container {
-  background-color: aqua;
-}
-
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -139,4 +122,102 @@ body {
 .ant-row,
 .ant-col {
   font-family: "Poppins", sans-serif;
+}
+
+.forms2-container {
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  background-color: #f8f9fa;
+  margin-top: 20px;
+}
+
+.header-content {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.ant-form-item {
+  margin-bottom: 20px;
+}
+
+.ant-select {
+  width: 100% !important;
+}
+
+.ant-input,
+.ant-select-selector {
+  border-radius: 4px;
+  height: 40px;
+}
+
+.ant-input-group-wrapper .ant-input {
+  border-radius: 0 4px 4px 0;
+}
+
+.ant-input-group-wrapper .ant-select {
+  border-radius: 4px 0 0 4px;
+}
+
+.ant-form-item-control-input-content {
+  display: flex;
+  align-items: center;
+}
+
+.ant-upload {
+  width: 100%;
+}
+
+.ant-btn {
+  height: 40px;
+  border-radius: 10px;
+}
+
+.ant-btn-primary {
+  background-color: #3c6cb4;
+  font-size: 20px;
+  width: 60px;
+}
+
+.ant-form-item-control-input-content .ant-btn {
+  width: 100%;
+}
+
+.ant-input-group > .ant-input:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.ant-input-group > .ant-input:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.custom-select {
+  height: 40px !important;
+}
+
+.custom-width-input {
+  width: 300px !important;
+}
+
+.forms-container {
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+}
+.form-actions {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.container2 {
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  background-color: #f8f9fa;
+  margin-top: 20px;
 }

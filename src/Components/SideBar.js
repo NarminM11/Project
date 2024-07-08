@@ -55,8 +55,8 @@
 //               }
 //             }
 //           >
-            
-//             <Nav.Link 
+
+//             <Nav.Link
 //               variant="outline-secondary"
 //               onClick={() => setCollapsed(!collapsed)}
 //               className="button-no-bg my-2 margin-top"
@@ -102,9 +102,6 @@
 
 // export default SideBar;
 
-
-
-
 import React, { useState } from "react";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import { Button, Layout, Menu as AntMenu, theme } from "antd";
@@ -114,10 +111,11 @@ import {
   faPlus,
   faBars,
   faHandPointer,
+  faRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
 import NavBar from "../Components/NavBar";
 import { Outlet } from "react-router-dom";
-
+import "../Assets/SideBar.css";
 const { Header, Sider, Content } = Layout;
 
 const SideBar = () => {
@@ -146,23 +144,6 @@ const SideBar = () => {
 
   return (
     <Layout>
-      {/* <Header
-        style={{
-          padding: 0,
-          background: colorBgContainer,
-        }}
-      > */}
-      {/* <Button
-          type="text"
-          icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-          onClick={() => setCollapsed(!collapsed)}
-          style={{
-            fontSize: "16px",
-            width: 64,
-            height: 64,
-          }}
-        /> */}
-      {/* </Header> */}
       <Layout>
         <Sider
           trigger={null}
@@ -170,19 +151,23 @@ const SideBar = () => {
           collapsed={collapsed}
           style={{
             background: "#d0d2d6",
-            backgroundImage: "linear-gradient(315deg, #cccccc 0%, #f5f7fa 74%)", // Background gradient
+            backgroundImage: "linear-gradient(315deg, #cccccc 0%, #f5f7fa 74%)",
             boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-            height: "100vh",
+            // height: "100vh",
           }}
         >
           <Button
             type="text"
+            className="menu-button"
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
             onClick={() => setCollapsed(!collapsed)}
             style={{
               fontSize: "16px",
               width: 74,
               height: 64,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           />
           <div
@@ -192,35 +177,22 @@ const SideBar = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              // marginBottom: 24,
             }}
-          ></div>
-          <AntMenu
-            mode="inline"
-            className="custom-menu"
-            style={{
-              background: "",
-            }}
-          >
+          />
+          <AntMenu mode="inline" className="custom-menu">
             {menuItems.map((item) => (
               <AntMenu.Item key={item.key} icon={item.icon}>
                 {item.label}
               </AntMenu.Item>
             ))}
           </AntMenu>
+          <div className="logout-icon">
+            <FontAwesomeIcon icon={faRightFromBracket} />
+          </div>
         </Sider>
+
         <Layout>
-          {/* <Content
-            style={{
-              margin: "24px 16px",
-              padding: 24,
-              minHeight: 280,
-              background: "colorBgContainer",
-              borderRadius: borderRadiusLG,
-            }}
-          > */}
-          <Outlet/>
-          {/* </Content> */}
+          <Outlet />
         </Layout>
       </Layout>
     </Layout>
@@ -228,4 +200,3 @@ const SideBar = () => {
 };
 
 export default SideBar;
-
