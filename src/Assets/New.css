@@ -221,3 +221,56 @@ body {
   background-color: #f8f9fa;
   margin-top: 20px;
 }
+.uploadFile{
+  width: 550px;
+  height: 320px;
+  border: 1px solid rgb(201, 197, 197);
+  background-color: #F3F3F3;
+  border-radius: 10px;
+}
+
+.uploadFileText{
+  margin-left: 20px;
+margin-right: 20px;
+font-size: 14px;
+}
+
+.uploadFile .icon {
+  font-size: 36px; 
+}
+
+.file{
+  font-size: 22px;
+}
+.custom-form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.custom-input-group .ant-input-group-addon {
+  width: 100px;
+  height: 40px;
+}
+
+.custom-input-group .ant-select {
+  width: 20% ;
+  margin-left: 20px;
+  height: 40px;
+
+}
+
+.custom-input-group .ant-input {
+  width: 50% !important;
+}
+.custom-input-group .ant-select {
+  margin-right: 8px;
+}
+/* .custom-form-number{
+  display: flex;
+
+  width: 600px;
+} */
+
+.select{
+  height: 40px;
+}

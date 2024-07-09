@@ -4,7 +4,7 @@ import SideBar from "../Components/SideBar";
 import Test from "../Components/Test";
 import HomePage from "../Pages/HomePage";
 import New from "../Components/New";
-
+import ComplaintInfo from '../Pages/ComplaintInfo'
 export const ROUTES = [
   {
     path: "/",
@@ -20,6 +20,10 @@ export const ROUTES = [
           {
             path: "test",
             element: <New />,
+          },
+          {
+            path: "info",
+            element: <ComplaintInfo />,
           },
         ],
       },

@@ -76,7 +76,7 @@ function Center() {
             <table className="table custom-table">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
+                  {/* <th scope="col">#</th> */}
                   <th scope="col">
                     Şikayət nömrəsi <FontAwesomeIcon icon={faCaretDown} />
                   </th>
@@ -96,11 +96,24 @@ function Center() {
                     Status <FontAwesomeIcon icon={faCaretDown} />
                   </th>
                   <th scope="col">
+                    Tarix <FontAwesomeIcon icon={faCaretDown} />
+                  </th>
+                  <th scope="col">
                     Əməliyyatlar <FontAwesomeIcon icon={faCaretDown} />
                   </th>
                 </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Internet (GPON, ADSL və s.)</td>
+                  <td>"ADANET" MMC</td>
+                  <td>Xidmətə qoşulma</td>
+                  <td>115664</td>
+                  <td>Baxılır</td>
+                  <td>08.09.2023</td>
+                  <td></td>
+                </tr>
               </thead>
-              <tbody>
+              {/* <tbody>
                 {tableData.length === 0 ? (
                   <tr>
                     <td
@@ -125,7 +138,7 @@ function Center() {
                     </tr>
                   ))
                 )}
-              </tbody>
+              </tbody> */}
             </table>
           </div>
         </div>

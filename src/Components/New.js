@@ -53,7 +53,7 @@ const New = () => {
       <div className="forms-container">
         <div className="new-header">
           <div className="header-content" style={{ fontSize: "28px" }}>
-            Şikayət Məlumatları
+            Şikayət məlumatları
           </div>
         </div>
         <div className="row">
@@ -69,6 +69,7 @@ const New = () => {
                     ]}
                   >
                     <Select
+                      className="custom-select "
                       placeholder="Faəliyyət sahəsi"
                       style={{ width: "100%" }}
                     >
@@ -85,6 +86,7 @@ const New = () => {
                     ]}
                   >
                     <Select
+                      className="custom-select "
                       placeholder="Şirkəti seçin"
                       style={{ width: "100%" }}
                     >
@@ -100,7 +102,11 @@ const New = () => {
                       { required: true, message: "Bu xana boş qoyula bilməz!" },
                     ]}
                   >
-                    <Select placeholder="Xarakterika" style={{ width: "100%" }}>
+                    <Select
+                      placeholder="Xarakterika"
+                      style={{ width: "100%" }}
+                      className="custom-select "
+                    >
                       <Option value="option1">Option 1</Option>
                       <Option value="option2">Option 2</Option>
                       <Option value="option3">Option 3</Option>
@@ -113,7 +119,11 @@ const New = () => {
                       { required: true, message: "Bu xana boş qoyula bilməz!" },
                     ]}
                   >
-                    <Select placeholder="Mövzu" style={{ width: "100%" }}>
+                    <Select
+                      className="custom-select "
+                      placeholder="Mövzu"
+                      style={{ width: "100%" }}
+                    >
                       <Option value="option1">Option 1</Option>
                       <Option value="option2">Option 2</Option>
                       <Option value="option3">Option 3</Option>
@@ -140,22 +150,22 @@ const New = () => {
                     <TextArea rows={4} placeholder="Maksimum 1000 simvol" />
                   </Form.Item>
                 </Col>
-                <Col xs={24} md={8}>
+                <Col xs={24} md={8} xl={8}>
                   <Form.Item
-                    label="Fayl Əlavə Et"
+                    // label="Fayl Əlavə Et"
+                    className="mt-5"
                     name="upload"
-                    rules={[
-                      { required: true, message: "Please upload a file" },
-                    ]}
+                    rules={[{ required: true, message: "" }]}
                   >
-                    <Upload onChange={handleFileSelect}>
-                      <Button
-                        icon={<UploadOutlined />}
-                        style={{ width: "100%" }}
-                      >
-                        Fayl əlavə et
-                      </Button>
-                    </Upload>
+                    <div className="uploadFile d-flex justify-content-center align-items-center flex-column">
+                      <i className="icon fa-solid fa-upload"></i>
+                      <h6 className="file mt-2">Fayl əlavə et</h6>
+                      <p className="uploadFileText mt-5">
+                        Faylları buraya əlavə edin. Faylın maksimum 10 MB
+                        həcmində, png, txt, jpeg, jpg, pdf formatında fayl əlavə
+                        edə bilərsiniz.
+                      </p>
+                    </div>
                   </Form.Item>
                 </Col>
               </Row>
@@ -171,21 +181,41 @@ const New = () => {
                     <Select
                       placeholder="Şəhəri seçin"
                       style={{ width: "100%" }}
+                      className="custom-select "
                     >
                       <Option value="option1">Option 1</Option>
                       <Option value="option2">Option 2</Option>
                       <Option value="option3">Option 3</Option>
                     </Select>
                   </Form.Item>
-                  <Form.Item
-                    label="Bina/ev"
-                    name="input1"
-                    rules={[
-                      { required: true, message: "Bu xana boş qoyula bilməz!" },
-                    ]}
-                  >
-                    <Input placeholder="" />
-                  </Form.Item>
+                  <div className="custom-form-row">
+                    <Form.Item
+                      label="Bina/ev"
+                      name="input1"
+                      className=""
+                      rules={[
+                        {
+                          required: true,
+                          message: "Bu xana boş qoyula bilməz!",
+                        },
+                      ]}
+                    >
+                      <Input placeholder="" />
+                    </Form.Item>
+                    <Form.Item
+                      label="Mənzil"
+                      name="input2"
+                      className=""
+                      rules={[
+                        {
+                          required: true,
+                          message: "Bu xana boş qoyula bilməz!",
+                        },
+                      ]}
+                    >
+                      <Input placeholder="" />
+                    </Form.Item>
+                  </div>
                 </Col>
                 <Col xs={24} md={6}>
                   <Form.Item
@@ -196,23 +226,76 @@ const New = () => {
                     ]}
                   >
                     <Select
+                      className="custom-select "
                       placeholder="Rayonu seçin"
-                      style={{ width: "100%" }}
+                      style={{ width: "50%" }}
                     >
                       <Option value="option1">Option 1</Option>
                       <Option value="option2">Option 2</Option>
                       <Option value="option3">Option 3</Option>
                     </Select>
                   </Form.Item>
-                  <Form.Item
-                    label="Mənzil"
-                    name="input2"
-                    rules={[
-                      { required: true, message: "Bu xana boş qoyula bilməz!" },
-                    ]}
-                  >
-                    <Input placeholder="" />
+
+                  {/* <div className="custom-form-row "> */}
+                  <Form.Item label="Əlaqə nömrəsi">
+                    {/* <Row gutter={24}> */}
+                    <Col span={6}>
+                      <Form.Item
+                        name="prefix"
+                        noStyle
+                        // rules={[
+                        //   { required: true, message: "Bu xana boş qoyula bilməz!" },
+                        // ]}
+                      >
+                        <Select
+                          onChange={(value) => setPrefix(value)}
+                          className="select"
+                          placeholder="(050)"
+                        >
+                          <Option value="050">050</Option>
+                          <Option value="051">051</Option>
+                          <Option value="055">055</Option>
+                          <Option value="070">070</Option>
+                          <Option value="077">077</Option>
+                          <Option value="010">010</Option>
+                          <Option value="060">060</Option>
+                          <Option value="099">099</Option>
+                        </Select>
+                      </Form.Item>
+                    </Col>
+                    <Col span={18}>
+                      <Form.Item
+                        name="phoneNumber"
+                        rules={[
+                          {
+                            required: true,
+                            message: "Bu xana boş qoyula bilməz!",
+                          },
+                          {
+                            pattern: /^[0-9]{7}$/,
+                            message: "",
+                          },
+                        ]}
+                        noStyle
+                      >
+                        <Input
+                          style={{ width: "100%" }}
+                          placeholder="XXX-XX-XX"
+                          addonBefore={
+                            <span className="input-addon">+994</span>
+                          }
+                          onKeyPress={(e) => {
+                            if (!/[0-9]/.test(e.key)) {
+                              e.preventDefault();
+                            }
+                          }}
+                        />
+                      </Form.Item>
+                    </Col>
+                    {/* </Row> */}
                   </Form.Item>
+
+                  {/* </div> */}
                 </Col>
                 <Col xs={24} md={6}>
                   <Form.Item
@@ -223,6 +306,7 @@ const New = () => {
                     ]}
                   >
                     <Select
+                      className="custom-select "
                       placeholder="Küçəni/Kəndi seçin"
                       style={{ width: "100%" }}
                     >
@@ -257,61 +341,7 @@ const New = () => {
                 </Col>
               </Row>
               <Row gutter={[16, 16]} className="mt-4">
-                <Col xs={24}>
-                  <Form.Item label="Əlaqə nömrəsi">
-                    <Input.Group compact>
-                      <Form.Item
-                        name="prefix"
-                        noStyle
-                        rules={[
-                          {
-                            required: true,
-                            message: "Please select a prefix!",
-                          },
-                        ]}
-                      >
-                        <Select
-                          style={{ width: 100 }}
-                          onChange={(value) => setPrefix(value)}
-                        >
-                          <Option value="050">050</Option>
-                          <Option value="051">051</Option>
-                          <Option value="055">055</Option>
-                          <Option value="070">070</Option>
-                          <Option value="077">077</Option>
-                          <Option value="010">010</Option>
-                          <Option value="060">060</Option>
-                          <Option value="099">099</Option>
-                        </Select>
-                      </Form.Item>
-                      <Form.Item
-                        name="phoneNumber"
-                        rules={[
-                          {
-                            required: true,
-                            message: "Bu xana boş qoyula bilməz!",
-                          },
-                          {
-                            pattern: /^[0-9]{7}$/,
-                            message: "Phone number must be 7 digits!",
-                          },
-                        ]}
-                        noStyle
-                      >
-                        <Input
-                          style={{ width: "calc(100% - 100px)" }}
-                          placeholder=""
-                          addonBefore={"+994"}
-                          onKeyPress={(e) => {
-                            if (!/[0-9]/.test(e.key)) {
-                              e.preventDefault();
-                            }
-                          }}
-                        />
-                      </Form.Item>
-                    </Input.Group>
-                  </Form.Item>
-                </Col>
+                <Col xs={24}></Col>
               </Row>
               <Row>
                 <Col span={24} style={{ textAlign: "right" }}>
