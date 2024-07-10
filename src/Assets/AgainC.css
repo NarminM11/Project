@@ -1,0 +1,12 @@
+.again-text {
+  background-color: azure;
+  border-radius: 6px;
+}
+
+.again-uploadFile {
+  width: 450px;
+  height: 220px;
+  border: 1px solid rgb(201, 197, 197);
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}

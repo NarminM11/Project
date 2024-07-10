@@ -13,6 +13,7 @@ const Navbar = () => {
           height="100%"
           alt=""
         />
+        
       </a>
       <div className="nav-word ms-auto d-flex align-items-center">
         <span>Mürşüdova Nərmin Rauf qızı</span>
@@ -20,8 +21,8 @@ const Navbar = () => {
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsCUNme8Tni4rSleVEs1VRLD29XPfLFv_LYA&s"
             className="rounded-circle"
-            width="30"
-            height="30"
+            width="40"
+            height="40"
             alt="Profile"
           />
         </div>

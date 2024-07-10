@@ -43,3 +43,9 @@ table {
   text-align: start;
   vertical-align: middle;
 }
+
+
+.eye-icon{
+  font-size: 20px;
+  background-color: red;
+}

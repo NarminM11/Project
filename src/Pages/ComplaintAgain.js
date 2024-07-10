@@ -1,12 +1,23 @@
 import React, { useState } from "react";
-import { Row, Col, Steps, Form, Button, Modal, Input } from "antd";
+import {
+  Row,
+  Col,
+  Steps,
+  Form,
+  Button,
+  Modal,
+  Input,
+  Select,
+  Option,
+} from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faInfo } from "@fortawesome/free-solid-svg-icons";
-import "../Assets/Info.css";
+import "../Assets/AgainC.css";
 import Navbar from "../Components/NavBar";
 
 const ComplaintDetails = () => {
   const { TextArea } = Input;
+  const { Option } = Select;
 
   const [open, setOpen] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
@@ -32,16 +43,6 @@ const ComplaintDetails = () => {
 
   const showSecondModal = () => {
     setSecondModalOpen(true);
-  };
-
-  const handleSecondModalOk = () => {
-    setSecondModalOpen(false);
-    //actions for clicking "OK" button on the second modal
-  };
-
-  const handleSecondModalCancel = () => {
-    setSecondModalOpen(false);
-    //actions for closing the second modal
   };
 
   return (
@@ -140,17 +141,90 @@ const ComplaintDetails = () => {
               ]}
             />
           </div>
+
+          <p className="again-text mt-4">
+            Hörmətli abunəçi! Sizin ünvanın yerləşdiyi ərazidə infrastrukturun
+            yenidənqurma işləri aparıldığından qoşulmaların təmin edilməsində
+            gecikmələr yaşanmışdır. 04.09.2023-cü il tarixində ünvana qoşulma
+            təmin edilmişdir.
+          </p>
         </div>
       </div>
 
-      <div className="cancel-button mt-4 d-flex justify-content-end">
+      <div>
+        <div className="header-content mt-5" style={{ fontSize: "18px" }}>
+          Təkrar şikayət
+        </div>
+        <Form>
+          <Row gutter={[16, 16]} className="mt-5">
+            <Col xs={24} md={4} className="label-col me-4">
+              <Form.Item
+                label="Şikayətə baxılmanın nəticəsi"
+                name="select1"
+                labelCol={{ span: 24 }}
+                wrapperCol={{ span: 24 }}
+                rules={[
+                  { required: true, message: "Bu xana boş qoyula bilməz!" },
+                ]}
+              >
+                <Select
+                  className="custom-select"
+                  placeholder="Seçim edin"
+                  style={{ width: "100%" }}
+                >
+                  <Option value="option1">Option 1</Option>
+                  <Option value="option2">Option 2</Option>
+                  <Option value="option3">Option 3</Option>
+                </Select>
+              </Form.Item>
+            </Col>
+            <Col xs={24} md={10} className="label-col">
+              <Form.Item
+                label="Şikayət mətni"
+                name="textarea"
+                labelCol={{ span: 24 }}
+                wrapperCol={{ span: 24 }}
+                rules={[
+                  { required: true, message: "Bu xana boş qoyula bilməz!" },
+                ]}
+              >
+                <TextArea
+                  rows={4}
+                  placeholder="Maksimum 1000 simvol"
+                  style={{ height: "220px" }}
+                />
+              </Form.Item>
+            </Col>
+            <Col xs={24} md={8} xl={6}>
+              <Form.Item
+                // label="Fayl Əlavə Et"
+                className="mt-5"
+                name="upload"
+                rules={[{ required: true, message: "" }]}
+              >
+                <div className="again-uploadFile d-flex justify-content-center align-items-center flex-column">
+                  <i className="icon fa-solid fa-upload"></i>
+                  <h6 className="file mt-2">Fayl əlavə et</h6>
+                  <p className="uploadFileText mt-5">
+                    Faylları buraya əlavə edin. Faylın maksimum 10 MB həcmində,
+                    png, txt, jpeg, jpg, pdf formatında fayl əlavə edə
+                    bilərsiniz.
+                  </p>
+                </div>
+              </Form.Item>
+            </Col>
+          </Row>
+        </Form>
+      </div>
+
+      {/* <div className="cancel-button mt-4 d-flex justify-content-end">
         <Form.Item className="cancel">
           <Button type="primary" onClick={showModal}>
             Şikayəti ləğv et
           </Button>
         </Form.Item>
-      </div>
-
+      </div> */}
+      {/* 
       <Modal
         title="Şikayəti ləğv etmək səbəbiniz nədir?"
         visible={open}
@@ -171,9 +245,9 @@ const ComplaintDetails = () => {
             placeholder="Şikayəti ləğv etmə səbəbinizi daxil edin."
           />
         </Form.Item>
-      </Modal>
+      </Modal> */}
 
-      <Modal
+      {/* <Modal
         visible={secondModalOpen}
         onCancel={handleSecondModalCancel}
         footer={[
@@ -188,7 +262,7 @@ const ComplaintDetails = () => {
         <p className="text-center mt-4" style={{ fontSize: "20px" }}>
           Şikayətiniz Ləğv Edildi
         </p>
-      </Modal>
+      </Modal> */}
     </div>
   );
 };

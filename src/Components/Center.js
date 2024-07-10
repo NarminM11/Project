@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlus,
@@ -6,6 +7,7 @@ import {
   faInfo,
   faCaretDown,
   faSearch,
+  faEye as farEye,
 } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Assets/Center.css";
@@ -33,10 +35,11 @@ function Center() {
               role="group"
               aria-label="Basic example"
             >
-              <button type="button" className="btn me-2">
-                <FontAwesomeIcon icon={faPlus} className="me-1" /> Yeni
-                Şikayetler
-              </button>
+            <Link to="/new">
+      <button type="button" className="btn me-2">
+        <FontAwesomeIcon icon={faPlus} className="me-1" /> Yeni Şikayetler
+      </button>
+    </Link>
               <button type="button" className="btn me-2">
                 <FontAwesomeIcon icon={faFilter} className="me-1" /> Ətraflı
                 Axtarış
@@ -106,11 +109,15 @@ function Center() {
                   <td>1</td>
                   <td>Internet (GPON, ADSL və s.)</td>
                   <td>"ADANET" MMC</td>
-                  <td>Xidmətə qoşulma</td>
+                  <td>Xidmətə qoşulma</td> 
                   <td>115664</td>
                   <td>Baxılır</td>
                   <td>08.09.2023</td>
-                  <td></td>
+                  <Link to="/info">
+
+                  <td className=" "><FontAwesomeIcon icon={farEye}/></td>
+                  </Link>
+
                 </tr>
               </thead>
               {/* <tbody>
