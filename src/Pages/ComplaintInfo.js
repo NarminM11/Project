@@ -160,7 +160,14 @@ const ComplaintDetails = () => {
         okText="Şikayəti ləğv et"
         cancelText="Bağla"
         okButtonProps={{ style: { width: "220px", fontSize: "18px" } }}
-        cancelButtonProps={{ style: { width: "120px", fontSize: "18px" } }}
+        cancelButtonProps={{
+          style: {
+            width: "120px",
+            fontSize: "18px",
+            color: "#3c6cb4",
+            border: "1px solid #3c6cb4",
+          },
+        }}
       >
         <Form.Item
           name="textarea"
@@ -182,10 +189,18 @@ const ComplaintDetails = () => {
           </Button>,
         ]}
       >
-        <div className="info-icon d-flex justify-content-center align-items-center flex-column mt-5">
+        <div
+          className="info-icon d-flex justify-content-center align-items-center flex-column mt-5"
+          style={{
+            color: "#3c6cb4",
+          }}
+        >
           <FontAwesomeIcon icon={faInfo} size="3x" />
         </div>
-        <p className="text-center mt-4" style={{ fontSize: "20px" }}>
+        <p
+          className="text-center mt-4"
+          style={{ fontSize: "20px", color: "#3c6cb4" }}
+        >
           Şikayətiniz Ləğv Edildi
         </p>
       </Modal>

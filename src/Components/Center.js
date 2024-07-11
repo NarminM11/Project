@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlus,
@@ -35,11 +35,12 @@ function Center() {
               role="group"
               aria-label="Basic example"
             >
-            <Link to="/new">
-      <button type="button" className="btn me-2">
-        <FontAwesomeIcon icon={faPlus} className="me-1" /> Yeni Şikayetler
-      </button>
-    </Link>
+              <Link to="/new">
+                <button type="button" className="btn me-2">
+                  <FontAwesomeIcon icon={faPlus} className="me-1" /> Yeni
+                  Şikayetler
+                </button>
+              </Link>
               <button type="button" className="btn me-2">
                 <FontAwesomeIcon icon={faFilter} className="me-1" /> Ətraflı
                 Axtarış
@@ -76,77 +77,53 @@ function Center() {
       <div className="row mt-3 third">
         <div className="col ">
           <div className="table-responsive">
-            <table className="table custom-table">
-              <thead>
-                <tr>
-                  {/* <th scope="col">#</th> */}
-                  <th scope="col">
-                    Şikayət nömrəsi <FontAwesomeIcon icon={faCaretDown} />
-                  </th>
-                  <th scope="col">
-                    Fəaliyyət sahəsi <FontAwesomeIcon icon={faCaretDown} />
-                  </th>
-                  <th scope="col">
-                    Şirkət <FontAwesomeIcon icon={faCaretDown} />
-                  </th>
-                  <th scope="col">
-                    Mövzu <FontAwesomeIcon icon={faCaretDown} />
-                  </th>
-                  <th scope="col">
-                    Abunəçi kodu <FontAwesomeIcon icon={faCaretDown} />
-                  </th>
-                  <th scope="col">
-                    Status <FontAwesomeIcon icon={faCaretDown} />
-                  </th>
-                  <th scope="col">
-                    Tarix <FontAwesomeIcon icon={faCaretDown} />
-                  </th>
-                  <th scope="col">
-                    Əməliyyatlar <FontAwesomeIcon icon={faCaretDown} />
-                  </th>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Internet (GPON, ADSL və s.)</td>
-                  <td>"ADANET" MMC</td>
-                  <td>Xidmətə qoşulma</td> 
-                  <td>115664</td>
-                  <td>Baxılır</td>
-                  <td>08.09.2023</td>
-                  <Link to="/info">
+          <table className="table custom-table">
+  <thead>
+    <tr>
+      <th scope="col">
+        Şikayət nömrəsi <FontAwesomeIcon icon={faCaretDown} />
+      </th>
+      <th scope="col">
+        Fəaliyyət sahəsi <FontAwesomeIcon icon={faCaretDown} />
+      </th>
+      <th scope="col">
+        Şirkət <FontAwesomeIcon icon={faCaretDown} />
+      </th>
+      <th scope="col">
+        Mövzu <FontAwesomeIcon icon={faCaretDown} />
+      </th>
+      <th scope="col">
+        Abunəçi kodu <FontAwesomeIcon icon={faCaretDown} />
+      </th>
+      <th scope="col">
+        Status <FontAwesomeIcon icon={faCaretDown} />
+      </th>
+      <th scope="col">
+        Tarix <FontAwesomeIcon icon={faCaretDown} />
+      </th>
+      <th scope="col">
+        Əməliyyatlar <FontAwesomeIcon icon={faCaretDown} />
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr >
+      <td >1</td>
+      <td>Internet (GPON, ADSL və s.)</td>
+      <td>"ADANET" MMC</td>
+      <td>Xidmətə qoşulma</td>
+      <td>115664</td>
+      <td>Baxılır</td>
+      <td>08.09.2023</td>
+      <td style={{ textAlign: 'center' }}>
+        <Link to="/info" style={{ display: 'block', width: '100%', height: '100%' }}>
+          <FontAwesomeIcon icon={farEye} />
+        </Link>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-                  <td className=" "><FontAwesomeIcon icon={farEye}/></td>
-                  </Link>
-
-                </tr>
-              </thead>
-              {/* <tbody>
-                {tableData.length === 0 ? (
-                  <tr>
-                    <td
-                      colSpan="8"
-                      className="text-center"
-                      style={{ height: "100px" }}
-                    >
-                      Heç bir məlumat əlavə edilməyib...
-                    </td>
-                  </tr>
-                ) : (
-                  tableData.map((item, index) => (
-                    <tr key={index}>
-                      <th scope="row">{index + 1}</th>
-                      <td>{item.sikayetNomresi}</td>
-                      <td>{item.fealiyyetSahesi}</td>
-                      <td>{item.sirket}</td>
-                      <td>{item.movzu}</td>
-                      <td>{item.abuneciKodu}</td>
-                      <td>{item.status}</td>
-                      <td>{item.emeliyyatlar}</td>
-                    </tr>
-                  ))
-                )}
-              </tbody> */}
-            </table>
           </div>
         </div>
       </div>

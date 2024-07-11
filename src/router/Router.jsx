@@ -15,7 +15,7 @@ export const ROUTES = [
         element: <SideBar />,
         children: [
           {
-            path: "test1",
+            path: "home",
             element: <Center />,
           },
           {

@@ -1,0 +1,523 @@
+{
+  "select1": [
+    { "value": "internet", "label": "Interner(GPON, ADSL və s.)" },
+    { "value": "t-rabite", "label": "Telefon rabitəsi" },
+    { "value": "m-internet", "label": "Mobil internet" },
+    { "value": "m-rabite", "label": "Mobil rabitə" },
+    { "value": "u-poct", "label": "Universal poçt rabitəsi xidmətləri" },
+    { "value": "s-poct", "label": "Sürətli poçt rabitəsi xidməti" }
+  ],
+  "select2": {
+    "internet": [
+      { "value": "alnet", "label": "ALNET MƏHDUD MƏSULİYYƏT CƏMİYYƏTİ" },
+      {
+        "value": "azintelnet",
+        "label": "AZİNTELNET MƏHDUD MƏSULİYYƏT CƏMİYYƏTİ"
+      },
+      {
+        "value": "aznet-technologies",
+        "label": "AZNET TECHNOLOGİES QAPALI SƏHMDAR CƏMİYYƏTİ"
+      },
+      { "value": "caspel", "label": "CASPEL MƏHDUD MƏSULİYYƏT CƏMİYYƏTİ" },
+      { "value": "crucel", "label": "CRUCEL MƏHDUD MƏSULİYYƏT CƏMİYYƏTİ" },
+      {
+        "value": "delta-telekom",
+        "label": "DELTA TELEKOM LTD MƏHDUD MƏSULİYYƏT CƏMİYYƏTİ"
+      },
+      { "value": "fastlink", "label": "FASTLİNK MƏHDUD MƏSULİYYƏT CƏMİYYƏTİ" },
+      {
+        "value": "gigabit-telecom",
+        "label": "GIGABİT TELECOM MƏHDUD MƏSULİYYƏT CƏMİYYƏTİ"
+      },
+      { "value": "robonet", "label": "ROBONET MƏHDUD MƏSULİYYƏT CƏMİYYƏTİ" },
+      { "value": "seabak", "label": "SEABAK MƏHDUD MƏSULİYYƏT CƏMİYYƏTİ" },
+      { "value": "setnet", "label": "SETNET MƏHDUD MƏSULİYYƏT CƏMİYYƏTİ" },
+      {
+        "value": "smart-office",
+        "label": "SMART OFFİCE MƏHDUD MƏSULİYYƏT CƏMİYYƏTİ"
+      },
+      {
+        "value": "vvorld-line",
+        "label": "VVORLD LİNE MƏHDUD MƏSULİYYƏT CƏMİYYƏTİ"
+      },
+      { "value": "adanet", "label": "ADANET" },
+      { "value": "ailamnet", "label": "AİLƏMNET" },
+      { "value": "ailanet", "label": "AİLƏNET" },
+      { "value": "alfa-telekom", "label": "ALFA TELEKOM" },
+      { "value": "alfanet", "label": "ALFANET" },
+      { "value": "artkom", "label": "ARTKOM" },
+      { "value": "azedunet", "label": "AZEDUNET" },
+      { "value": "azerl-ink", "label": "AZERLİNK" },
+      { "value": "azeronline", "label": "AZERONLİNE" },
+      { "value": "azeuro-net", "label": "AZEURONET" },
+      { "value": "azureotel", "label": "AZUREOTEL" },
+      { "value": "azfibernet", "label": "AZFİBERNET" },
+      { "value": "aziko", "label": "AZİKO" },
+      { "value": "azincom-az", "label": "AZİNCOM.AZ" },
+      { "value": "azinte-xcom", "label": "AZİNTEX.COM" },
+      { "value": "azlink", "label": "AZLİNK" },
+      { "value": "azmeganet", "label": "AZMEQANET" },
+      { "value": "aznet", "label": "AZNET" },
+      { "value": "azoptiknet", "label": "AZOPTİKNET" },
+      { "value": "azstarnet", "label": "AZSTARNET" },
+      { "value": "aztechnet", "label": "AZTECHNET" },
+      { "value": "aztelekem", "label": "AZTELEKEM" },
+      { "value": "bakte-telecom", "label": "BAKTELECOM" },
+      { "value": "bakuhotspot", "label": "BAKUHOTSPOT" },
+      { "value": "bee-online", "label": "BEE ONLİNE" },
+      { "value": "bilevnet", "label": "BİLEVNET" },
+      { "value": "birlink", "label": "BİRLİNK" },
+      { "value": "bline", "label": "BLİNE" },
+      { "value": "blu-e-tv", "label": "BLUET V" },
+      { "value": "boss-group", "label": "BOSS GROUP" },
+      { "value": "bulud-telekom", "label": "BULUD TELEKOM" },
+      { "value": "buta-telecom", "label": "BUTA TELECOM" },
+      { "value": "bynet", "label": "BYNET" },
+      { "value": "cityline", "label": "CİTYLİNE" },
+      { "value": "citynet", "label": "CİTYNET" },
+      { "value": "cliptv", "label": "CLİPTV" },
+      { "value": "connect", "label": "CONNECT" },
+      { "value": "data-plus", "label": "DATA PLUS" },
+      { "value": "diginet", "label": "DİGİNET" },
+      { "value": "du-telecom", "label": "DU TELECOM" },
+      { "value": "elfiber", "label": "ELFİBER" },
+      { "value": "eurosel", "label": "EUROSEL" },
+      { "value": "extranet", "label": "EXTRANET" },
+      { "value": "fastnet", "label": "FASTNET" },
+      { "value": "fiberhome", "label": "FİBERHOME" },
+      { "value": "fibernet", "label": "FİBERNET" },
+      { "value": "fiberon", "label": "FİBERON" },
+      { "value": "fiberonline", "label": "FİBERONLİNE" },
+      { "value": "fiberzone", "label": "FİBERZONE" },
+      { "value": "flexnet", "label": "FLEXNET" },
+      { "value": "gamma-skynet", "label": "GAMMA-SKYNET" },
+      { "value": "gammanet", "label": "GAMMANET" },
+      { "value": "go-line", "label": "GO LİNE" },
+      { "value": "go-telecom", "label": "GO TELECOM" },
+      { "value": "goodnet", "label": "GOODNET" },
+      { "value": "homenet", "label": "HOMENET" },
+      { "value": "hypernet", "label": "HYPERNET" },
+      { "value": "kapital-telecom", "label": "KAPİTAL TELECOM" },
+      { "value": "katv", "label": "KATV" },
+      { "value": "lentel", "label": "LENTEL" },
+      { "value": "linknet", "label": "LİNKNET" },
+      { "value": "maxinet", "label": "MAXİNET" },
+      { "value": "megalink", "label": "MEGALİNK" },
+      { "value": "metronet", "label": "METRONET" },
+      {
+        "value": "naxiternet",
+        "label": "Naxiternet- NAXÇIVAN MUXTAR RESPUBLİKASL RABİTƏ VƏ YENİ TEXNOLOGİYALARİ NAZİRLİYİ TABELİYİNDƏ NAXÇIVAN MUXTAR RESPUBLİKASININ İNTERNET VƏ YENİ TEXNOLOGİYALARIN TƏDRİS MƏRKƏZİ"
+      },
+      { "value": "nest-fiber", "label": "NEST FİBER" },
+      { "value": "net-express", "label": "NET EXPRESS" },
+      { "value": "netim-telekom", "label": "NETİM TELEKOM" },
+      { "value": "netpoint", "label": "NETPOİNT" },
+      { "value": "oip", "label": "OİP" },
+      { "value": "omniya", "label": "OMNİYA" },
+      { "value": "optik-az", "label": "OPTİK.AZ" },
+      { "value": "portflix", "label": "PORTFLİX" },
+      { "value": "premiumnetaz", "label": "PREMİUMNETAZ" },
+      { "value": "qafqaznet", "label": "QAFQAZNET" },
+      { "value": "quicknet", "label": "QUİCKNET" },
+      { "value": "rahat-telecom", "label": "RAHAT TELECOM" },
+      { "value": "real-telecom", "label": "REAL TELECOM" },
+      { "value": "rr-telecom", "label": "RR TELECOM" },
+      { "value": "sazline", "label": "SAZLİNE" },
+      { "value": "sazz", "label": "SAZZ" },
+      { "value": "selnet", "label": "SELNET" },
+      { "value": "sevenline", "label": "SEVENLİNE" },
+      { "value": "sevinc-telekom", "label": "SEVİNC TELEKOM" },
+      { "value": "shakhtv", "label": "SHAKHTV" },
+      { "value": "shef-group", "label": "SHEF GROUP" },
+      { "value": "skylink", "label": "SKYLİNK" },
+      { "value": "skynet", "label": "SKYNET" },
+      { "value": "sline", "label": "SLİNE" },
+      { "value": "smart-online", "label": "SMART ONLİNE" },
+      { "value": "sntv-internet", "label": "SNTV İNTERNET" },
+      { "value": "sparktel", "label": "SPARKTEL" },
+      { "value": "speednet", "label": "SPEEDNET" },
+      { "value": "start-telecom", "label": "START TELECOM" },
+      { "value": "superoptic", "label": "SUPEROPTİC" },
+      { "value": "tele5", "label": "TELE5" },
+      { "value": "telekom-invest", "label": "TELEKOM İNVEST" },
+      { "value": "teleport", "label": "TELEPORT" },
+      { "value": "transeurocom-internet", "label": "TRANSEUROCOM İNTERNET" },
+      { "value": "trust-mmc", "label": "TRUST MMC" },
+      { "value": "ttnet", "label": "TTNET" },
+      { "value": "tvnet-internet", "label": "TVNET İNTERNET" },
+      { "value": "ubnet", "label": "UBNET" },
+      { "value": "ultel", "label": "ULTEL" },
+      { "value": "ultranet", "label": "ULTRANET" },
+      { "value": "umna-az", "label": "UMNA.AZ" },
+      {
+        "value": "uni-communication-services",
+        "label": "UNİ COMMUNİCATİON SERVİCES"
+      },
+      { "value": "uplink", "label": "UPLİNK" },
+      { "value": "veiv-company", "label": "VEİV COMPANY" },
+      { "value": "vision-telecom", "label": "VİSİON TELECOM" },
+      { "value": "wifly", "label": "WIFLY" },
+      { "value": "worldtech", "label": "WORLDTECH" }
+    ],
+    "t-rabite": [
+      {
+        "value": "azinteletecom",
+        "label": "AZERBAIJAN INTERNATIONAL TELECOM(AZINTELECOM) MƏHDUD MƏSULİYYƏTLİ CƏMİYYƏT"
+      },
+      {
+        "value": "aztelekom",
+        "label": "AZƏRTELEKOM MƏHDUD MƏSULİYYƏT CƏMİYYƏTİ"
+      },
+      {
+        "value": "delta-telekom",
+        "label": "DELTA TELEKOM LTD MƏHDUD MƏSULİYYƏT CƏMİYYƏTİ"
+      },
+      { "value": "azeurotel", "label": "AZEUROTEL" },
+      { "value": "aztelecom", "label": "AZTELEKOM" },
+      { "value": "baktekom", "label": "BAKTELEKOM" },
+      { "value": "transeurocom", "label": "TRANSEUROCOM İNTERNET" },
+      { "value": "ultel", "label": "ULTEL" }
+    ],
+    "m-internet": [
+      { "value": "i-azercell", "label": "AZERCELL" },
+      { "value": "i-bakcell", "label": "BAKCELL" },
+      { "value": "i-nar", "label": "NAR" },
+      { "value": "i-naxtel", "label": "NAXTEL" }
+    ],
+    "m-rabite": [
+      { "value": "m-azercell", "label": "AZERCELL" },
+      { "value": "m-bakcell", "label": "BAKCELL" },
+      { "value": "m-nar", "label": "NAR" },
+      { "value": "m-naxtel", "label": "NAXTEL" }
+    ],
+    "u-poct": [{ "value": "jpmorgan", "label": "AZƏRPOÇT MMC" }],
+    "s-poct": [
+      { "value": "166-express", "label": "166 EXPRESS MMC(166KARGO)" },
+      { "value": "189-courier", "label": "189 COURIER MMC" },
+      { "value": "aba-express", "label": "ABA EXPRESS MMC" },
+      { "value": "afex-group", "label": "AFEX GROUP MMC" },
+      { "value": "afex", "label": "AFEX MMC" },
+      { "value": "ag-sahin", "label": "AĞ ŞAHİN ASC" },
+      { "value": "al-cargo-company", "label": "AL CARGO COMPANY MMC" },
+      { "value": "alex-express", "label": "ALEX EXPRESS MMC" },
+      { "value": "alibex", "label": "ALİBEX MMC" },
+      { "value": "araz-kargi", "label": "ARAZ KARQİ MMC" },
+      {
+        "value": "ase-asia-africa",
+        "label": "ASE ASYA AFRİKA HIZLI KARQO VE DAĞITIM MMC (ASE)"
+      },
+      { "value": "assu-az", "label": "ASSU.AZ MMC" },
+      { "value": "atlas-express", "label": "ATLAS EXPRESS MMC" },
+      { "value": "avand-express", "label": "AVAND EXPRESS MMC" },
+      { "value": "azari", "label": "Azari MMC" },
+      { "value": "azcamex", "label": "AZCAMEX MMC" },
+      {
+        "value": "azcargo-logistic",
+        "label": "Azcargo Logistic and Managment Service MMC"
+      },
+      { "value": "azercargi-company", "label": "AZERCARGİ COMPANY MMC" },
+      { "value": "azeri-express", "label": "AZƏRİ EXPRESS MMM" },
+      {
+        "value": "azeri-express-services",
+        "label": "AZƏRİ EXPRESS SERVİCES MMC"
+      },
+      { "value": "azexpress", "label": "AZEXPRESS MMC (AZEX)" },
+      { "value": "bahar-kargo", "label": "Bahar kargo MMC" },
+      { "value": "baku-kurier", "label": "BAKI KURYER MMC" },
+      { "value": "beep", "label": "BEEP MMC (BEEPEX)" },
+      { "value": "berkut-express", "label": "BERKUT EXPRESS MMC" },
+      { "value": "best-delivery", "label": "BEST DELİVERY MMC" },
+      { "value": "buta-express", "label": "BUTA EXPRESS MMC (BUTEX)" },
+      { "value": "caspa-mobility", "label": "CASPA MOBİLİTY MMC" },
+      { "value": "cfex", "label": "CFEX MMC" },
+      { "value": "colibri-express", "label": "COLİBRİ EXPRESS MMC" },
+      { "value": "competo", "label": "COMPETO MMC (UMİCO)" },
+      { "value": "courierbaku", "label": "COURİERBAKU.AZ MMC" },
+      { "value": "courier-service", "label": "COURRİER SERVİCE MMC" },
+      { "value": "derhal", "label": "DƏRHAL LTD MMC (DHL)" },
+      { "value": "dh-logistics", "label": "DH LOGİSTİKA QSC (DƏMİR KARGO)" },
+      { "value": "dynamex-express", "label": "DYNAMEX EXPRESS MMC (DYNAMEX)" },
+      { "value": "express-poct-service", "label": "EXPRESS POÇT SERVİCE MMC" },
+      { "value": "el-post", "label": "EL POST MMC" },
+      { "value": "exbir-logistics", "label": "EXBİR LOGİSTİCS MMC (EXİ)" },
+      { "value": "expert", "label": "EXPERT MMC (EXPARGO)" },
+      {
+        "value": "express-courier-services",
+        "label": "EXPRESS COURİER SERVİCES MMC"
+      },
+      { "value": "express-kuriyer", "label": "EXPRESS KURYER MMC" },
+      { "value": "eyol", "label": "EYOL MMC" },
+      { "value": "famko-express", "label": "FAMKO EXPRESS MMC" },
+      { "value": "famko-kuryer", "label": "FAMKO KURYER VƏ KARGO MMC" },
+      { "value": "fex", "label": "FEX MMC" },
+      { "value": "find-express", "label": "FİND EXPRESS MMC" },
+      { "value": "flyex", "label": "FLYEX MMC" },
+      { "value": "fm-express", "label": "FM EXPRESS MMC" },
+      { "value": "global-express", "label": "GLOBAL EXPRESS MMC" },
+      { "value": "goex", "label": "GOEX MMC" },
+      { "value": "goexpress", "label": "GOEXPRESS MMC" },
+      { "value": "gold-rn", "label": "GOLD R.N MMC" },
+      { "value": "jet-express", "label": "JET EXPRESS MMC (JETEX)" },
+      { "value": "kango", "label": "KANGO MMC" },
+      { "value": "kargo-flex", "label": "KARGO FLEX MMC" },
+      { "value": "kargo-az", "label": "KARGO.AZ MMC" },
+      { "value": "kargoluc-company", "label": "KARGOLUC COMPANY MMC" },
+      { "value": "kargomex", "label": "KARGOMEX MMC" },
+      { "value": "koli", "label": "KOLİ MMC" },
+      { "value": "limak-az", "label": "LİMAK AZ MMC" },
+      { "value": "line-express", "label": "LİNE EXPRESS MMC (LinEX)" },
+      { "value": "lsp", "label": "LSP MMC" },
+      { "value": "lunaexpress", "label": "LUNAEXPRESS MMC" },
+      { "value": "luxecity", "label": "LUXECİTY MMC" },
+      { "value": "mail-express", "label": "MAİL-EXPRESS MMC" },
+      { "value": "mega-express", "label": "MEGA EXPRESS MMC" },
+      { "value": "mobil-express", "label": "MOBİL EXPRESS MMC (MOBEX)" },
+      { "value": "morex", "label": "MOREX MMC" },
+      { "value": "my-courier", "label": "MY COURİER MMC" },
+      { "value": "naxcivan-kargo", "label": "Naxçıvan Kargo MMC" },
+      { "value": "net-tech", "label": "NET TECH MMC" },
+      { "value": "nurlu-express", "label": "NURLU EXPRESS MMC" },
+      { "value": "nurlu-kargo", "label": "Nurlu Kargo MMC" },
+      { "value": "ocag-express", "label": "OCAQ EXPRESS MMC" },
+      { "value": "one-box", "label": "ONE BOX MMC" },
+      { "value": "order-express", "label": "ORDER EXPRESS MMC" },
+      { "value": "pelican-service", "label": "PELİCAN SERVİCE MMC" },
+      { "value": "peqasus", "label": "PEQASUS MMC (ARAMEX)" },
+      { "value": "post-express", "label": "POST EXPRESS MMC (POSTEX)" },
+      { "value": "qute", "label": "QUTE MMC" },
+      { "value": "royal-express", "label": "ROYAL EXPRESS MMC" },
+      { "value": "run-express", "label": "RUN EXPRESS MMC (RUNEX)" },
+      { "value": "safe-express", "label": "SAFE EXPRESS MMC (SAFEX)" },
+      { "value": "sendex", "label": "SENDEX MMC" },
+      { "value": "skybox-cargo", "label": "SKYBOX CARGO MMC" },
+      { "value": "smartpost", "label": "SMARTPOST MMC" },
+      { "value": "snn-expert", "label": "SNN EXPERT MMC" },
+      {
+        "value": "start-express-azerbaijan",
+        "label": "START EXPRESS AZƏRBAYCAN MMC (STAREX)"
+      },
+      { "value": "sunny-sky", "label": "SUNNY SKY MMC (SUNEX)" },
+      { "value": "suret-kargo", "label": "SÜRƏT KARGO MMC" },
+      { "value": "trend-express", "label": "TREND EXPRESS MMC (TRENDEX)" },
+      { "value": "up-express", "label": "UP EXPRESS MMC (UPEX)" },
+      { "value": "ups-az", "label": "UPS-AZ MMC (UPS)" },
+      { "value": "vadi-group", "label": "VADİ GROUP MMC" },
+      { "value": "vin-express", "label": "VİN EXPRESS MMC (WINEX)" },
+      { "value": "yaps", "label": "Y.A.P.S MMC" },
+      { "value": "yeni-poct", "label": "YENİ POÇT MMC" },
+      { "value": "zaman-express", "label": "ZAMAN EXPRESS MMC" },
+      { "value": "zamex", "label": "ZAMEX MMC" },
+      { "value": "haciyev-vuqar", "label": "Hacıyev Vüqar Tofiq" },
+      { "value": "qasımov-anar", "label": "Qasımov Anar Dursun oğlu" },
+      {
+        "value": "qasimzade-meherrem",
+        "label": "Qasımzadə Məhərrəm Elxan oğluna (MƏHƏRRƏM KARGO)"
+      },
+      { "value": "qedirli-vaqif", "label": "Qədirli Vaqif Vasif oğlu" },
+      { "value": "resulov-xaledin", "label": "Rəsulov Xaləddin Camal oğlu" },
+      { "value": "tagi-samir", "label": "Tağı Samir Vidadi oğlu" },
+      { "value": "ok-express", "label": "OK EXPRESS MMC" },
+      { "value": "superoptic", "label": "SUPEROPTİC" },
+      { "value": "tele5", "label": "TELE5" },
+      { "value": "telekom-invest", "label": "TELEKOM İNVEST" },
+      { "value": "teleport", "label": "TELEPORT" },
+      { "value": "transeurocom-internet", "label": "TRANSEUROCOM İNTERNET" },
+      { "value": "trust", "label": "TRUST MMC" },
+      { "value": "ttnet", "label": "TTNET" },
+      { "value": "tvnet-internet", "label": "TVNET İNTERNET" },
+      { "value": "ubnet", "label": "UBNET" },
+      { "value": "ultel", "label": "ULTEL" },
+      { "value": "ultranet", "label": "ULTRANET" },
+      { "value": "umna-az", "label": "UMNA.AZ" },
+      {
+        "value": "uni-communication-services",
+        "label": "UNİ COMMUNİCATİON SERVİCES"
+      },
+      { "value": "uplink", "label": "UPLİNK" },
+      { "value": "veiv-company", "label": "VEİV COMPANY" },
+      { "value": "vision-telecom", "label": "VİSİON TELECOM" },
+      { "value": "wifly", "label": "WIFLY" },
+      { "value": "worldtech", "label": "WORLDTECH" }
+    ]
+  },
+  "select3": {
+    "internet": [
+      {
+        "value": "azinteletecom",
+        "label": "Əlavə servis xidmətləri ilə bağlı şikayət (əlavə dəyr xidmətləri o cümlədən  OTT)"
+      },
+      {
+        "value": "aztelekom-service",
+        "label": "Əməkdaşlardan və ya xidmətdən narazılıq"
+      },
+      {
+        "value": "delta-telekom",
+        "label": "İnfrastrukturla əlaqədar şikayətlər"
+      },
+      {
+        "value": "azeurotel",
+        "label": "Xidmətin işləməməsi ilə bağlı şikayət"
+      },
+      {
+        "value": "aztelekom-quality",
+        "label": "Xidmətin keyfiyyəti ilə bağlı şikayət"
+      },
+      {
+        "value": "baktekom",
+        "label": "Xidmətin qoşulması ilə bağlı şikayət (abunə əməliyyatları)"
+      },
+      { "value": "transeurocom", "label": "Xitam (xidmətin dayandırılması)" },
+      {
+        "value": "ultel-payment",
+        "label": "Ödənişlərlə bağlı-korreksiya ilə bağlı şikayət (fakturalanma)"
+      },
+      { "value": "ultel-tariff", "label": "Tariflərlə bağlı şikayət" },
+      {
+        "value": "ultel-provider",
+        "label": "Operator və ya provayderin ümumi fəaliyyətindən narazılıq"
+      }
+    ],
+    "t-rabite": [
+      {
+        "value": "azinteletecom",
+        "label": "Əlavə servis xidmətləri ilə bağlı şikayət (əlavə dəyr xidmətləri o cümlədən  OTT)"
+      },
+      {
+        "value": "aztelekom-service",
+        "label": "Əməkdaşlardan və ya xidmətdən narazılıq"
+      },
+      {
+        "value": "delta-telekom",
+        "label": "İnfrastrukturla əlaqədar şikayətlər"
+      },
+      {
+        "value": "azeurotel",
+        "label": "Xidmətin işləməməsi ilə bağlı şikayət"
+      },
+      {
+        "value": "aztelekom-quality",
+        "label": "Xidmətin keyfiyyəti ilə bağlı şikayət"
+      },
+      {
+        "value": "baktekom",
+        "label": "Xidmətin qoşulması ilə bağlı şikayət (abunə əməliyyatları)"
+      },
+      { "value": "transeurocom", "label": "Xitam (xidmətin dayandırılması)" },
+      {
+        "value": "ultel-payment",
+        "label": "Ödənişlərlə bağlı-korreksiya ilə bağlı şikayət (fakturalanma)"
+      },
+      { "value": "ultel-tariff", "label": "Tariflərlə bağlı şikayət" },
+      {
+        "value": "ultel-provider",
+        "label": "Operator və ya provayderin ümumi fəaliyyətindən narazılıq"
+      }
+    ],
+    "m-internet": [
+      {
+        "value": "azinteletecom",
+        "label": "Əlavə servis xidmətləri ilə bağlı şikayət (əlavə dəyr xidmətləri o cümlədən  OTT)"
+      },
+      {
+        "value": "aztelekom-service",
+        "label": "Əməkdaşlardan və ya xidmətdən narazılıq"
+      },
+      {
+        "value": "delta-telekom",
+        "label": "İnfrastrukturla əlaqədar şikayətlər"
+      },
+      {
+        "value": "azeurotel",
+        "label": "Xidmətin işləməməsi ilə bağlı şikayət"
+      },
+      {
+        "value": "aztelekom-quality",
+        "label": "Xidmətin keyfiyyəti ilə bağlı şikayət"
+      },
+      {
+        "value": "baktekom",
+        "label": "Xidmətin qoşulması ilə bağlı şikayət (abunə əməliyyatları)"
+      },
+      { "value": "transeurocom", "label": "Xitam (xidmətin dayandırılması)" },
+      {
+        "value": "ultel-payment",
+        "label": "Ödənişlərlə bağlı-korreksiya ilə bağlı şikayət (fakturalanma)"
+      },
+      { "value": "ultel-tariff", "label": "Tariflərlə bağlı şikayət" },
+      {
+        "value": "ultel-provider",
+        "label": "Operator və ya provayderin ümumi fəaliyyətindən narazılıq"
+      }
+    ],
+    "m-rabite": [
+      {
+        "value": "azinteletecom",
+        "label": "Əlavə servis xidmətləri ilə bağlı şikayət (əlavə dəyr xidmətləri o cümlədən  OTT)"
+      },
+      {
+        "value": "aztelekom-service",
+        "label": "Əməkdaşlardan və ya xidmətdən narazılıq"
+      },
+      {
+        "value": "delta-telekom",
+        "label": "İnfrastrukturla əlaqədar şikayətlər"
+      },
+      {
+        "value": "azeurotel",
+        "label": "Xidmətin işləməməsi ilə bağlı şikayət"
+      },
+      {
+        "value": "aztelekom-quality",
+        "label": "Xidmətin keyfiyyəti ilə bağlı şikayət"
+      },
+      {
+        "value": "baktekom",
+        "label": "Xidmətin qoşulması ilə bağlı şikayət (abunə əməliyyatları)"
+      },
+      { "value": "transeurocom", "label": "Xitam (xidmətin dayandırılması)" },
+      {
+        "value": "ultel-payment",
+        "label": "Ödənişlərlə bağlı-korreksiya ilə bağlı şikayət (fakturalanma)"
+      },
+      { "value": "ultel-tariff", "label": "Tariflərlə bağlı şikayət" },
+      {
+        "value": "ultel-provider",
+        "label": "Operator və ya provayderin ümumi fəaliyyətindən narazılıq"
+      }
+    ],
+    "u-poct": [
+      {
+        "value": "postal-service",
+        "label": "Poçt/poçt amliyyə xidmətləri barədə şikayət"
+      },
+      {
+        "value": "postal-staff",
+        "label": "Poçt obyekti və əməkdaşları barədə şikayət"
+      },
+      {
+        "value": "customer-service",
+        "label": "Müştəri xidmətləri barədə şikayət"
+      }
+    ],
+    "s-poct": [
+      {
+        "value": "post-shipments",
+        "label": "Poçt göndərişləri barədə şikayət"
+      },
+      {
+        "value": "post-office-staff",
+        "label": "Poçt obyekti və əməkdaşları barədə şikayət"
+      },
+      {
+        "value": "customer-service",
+        "label": "Müştəri xidmətləri barədə şikayət"
+      }
+    ]
+  },
+
+  "select4": [
+    { "value": "option1", "label": "Option 1" },
+    { "value": "option2", "label": "Option 2" },
+    { "value": "option3", "label": "Option 3" }
+  ]
+}

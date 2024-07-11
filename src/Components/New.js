@@ -9,25 +9,30 @@ import {
   Typography,
   Row,
   Col,
+  Modal,
 } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faSlash } from "@fortawesome/free-solid-svg-icons";
-import "../Assets/New.css";
+import { faCheck, faInfo } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "../Components/NavBar";
+import optionsData from "../data.json";
+import "../Assets/New.css";
 
 const { Option } = Select;
 const { TextArea } = Input;
 const { Title } = Typography;
 
 const New = () => {
+  const [selectedFile, setSelectedFile] = useState(null);
   const [filePreview, setFilePreview] = useState(null);
+  const [open, setOpen] = useState(false);
+  const [confirmLoading, setConfirmLoading] = useState(false);
+  const [secondModalOpen, setSecondModalOpen] = useState(false);
 
   const formItemLayout = {
     labelCol: { span: 24 },
     wrapperCol: { span: 24 },
   };
-  const [form] = Form.useForm();
   const [prefix, setPrefix] = useState("050");
 
   const onFinish = (values) => {
@@ -45,6 +50,59 @@ const New = () => {
       setFilePreview(reader.result);
     };
     reader.readAsDataURL(info.file.originFileObj);
+  };
+  const handleChange = (e) => {
+    const file = e.target.files[0];
+    setSelectedFile(file);
+  };
+
+  const showModal = () => {
+    setOpen(true);
+  };
+  const handleSecondModalOk = () => {
+    setSecondModalOpen(false);
+    //actions for clicking "OK" button on the second modal
+  };
+
+  const handleOk = () => {
+    setConfirmLoading(true);
+    setTimeout(() => {
+      setOpen(false);
+      setConfirmLoading(false);
+    }, 2000);
+  };
+
+  const handleCancel = () => {
+    console.log("Clicked cancel button");
+    setOpen(false);
+  };
+
+  const [form] = Form.useForm();
+  const [firstSelect, setFirstSelect] = useState("");
+  const [secondSelect, setSecondSelect] = useState("");
+  const [thirdSelect, setThirdSelect] = useState("");
+  const [fourthSelect, setFourthSelect] = useState("");
+
+  const handleFirstSelectChange = (value) => {
+    setFirstSelect(value);
+    setSecondSelect("");
+    setThirdSelect("");
+    setFourthSelect("");
+  };
+
+  const handleSecondSelectChange = (value) => {
+    setSecondSelect(value);
+    setThirdSelect("");
+    setFourthSelect("");
+  };
+
+  const handleThirdSelectChange = (value) => {
+    setThirdSelect(value);
+    setFourthSelect("");
+  };
+
+  const handleFourthSelectChange = (value) => {
+    setFourthSelect(value);
   };
 
   return (
@@ -69,13 +127,17 @@ const New = () => {
                     ]}
                   >
                     <Select
-                      className="custom-select "
+                      className="custom-select"
                       placeholder="Faəliyyət sahəsi"
                       style={{ width: "100%" }}
+                      onChange={handleFirstSelectChange}
+                      value={firstSelect}
                     >
-                      <Option value="option1">Option 1</Option>
-                      <Option value="option2">Option 2</Option>
-                      <Option value="option3">Option 3</Option>
+                      {optionsData.select1.map((option) => (
+                        <Option key={option.value} value={option.value}>
+                          {option.label}
+                        </Option>
+                      ))}
                     </Select>
                   </Form.Item>
                   <Form.Item
@@ -86,13 +148,19 @@ const New = () => {
                     ]}
                   >
                     <Select
-                      className="custom-select "
+                      className="custom-select"
                       placeholder="Şirkəti seçin"
                       style={{ width: "100%" }}
+                      onChange={handleSecondSelectChange}
+                      value={secondSelect}
+                      disabled={!firstSelect}
                     >
-                      <Option value="option1">Option 1</Option>
-                      <Option value="option2">Option 2</Option>
-                      <Option value="option3">Option 3</Option>
+                      {firstSelect &&
+                        optionsData.select2[firstSelect]?.map((option) => (
+                          <Option key={option.value} value={option.value}>
+                            {option.label}
+                          </Option>
+                        ))}
                     </Select>
                   </Form.Item>
                   <Form.Item
@@ -105,11 +173,17 @@ const New = () => {
                     <Select
                       placeholder="Xarakterika"
                       style={{ width: "100%" }}
-                      className="custom-select "
+                      className="custom-select"
+                      onChange={handleThirdSelectChange}
+                      value={thirdSelect}
+                      disabled={!secondSelect}
                     >
-                      <Option value="option1">Option 1</Option>
-                      <Option value="option2">Option 2</Option>
-                      <Option value="option3">Option 3</Option>
+                      {secondSelect &&
+                        optionsData.select3[secondSelect]?.map((option) => (
+                          <Option key={option.value} value={option.value}>
+                            {option.label}
+                          </Option>
+                        ))}
                     </Select>
                   </Form.Item>
                   <Form.Item
@@ -120,13 +194,19 @@ const New = () => {
                     ]}
                   >
                     <Select
-                      className="custom-select "
+                      className="custom-select"
                       placeholder="Mövzu"
                       style={{ width: "100%" }}
+                      onChange={handleFourthSelectChange}
+                      value={fourthSelect}
+                      disabled={!thirdSelect}
                     >
-                      <Option value="option1">Option 1</Option>
-                      <Option value="option2">Option 2</Option>
-                      <Option value="option3">Option 3</Option>
+                      {thirdSelect &&
+                        optionsData.select4[thirdSelect]?.map((option) => (
+                          <Option key={option.value} value={option.value}>
+                            {option.label}
+                          </Option>
+                        ))}
                     </Select>
                   </Form.Item>
                 </Col>
@@ -152,19 +232,33 @@ const New = () => {
                 </Col>
                 <Col xs={24} md={8} xl={8}>
                   <Form.Item
-                    // label="Fayl Əlavə Et"
                     className="mt-5"
                     name="upload"
-                    rules={[{ required: true, message: "" }]}
+                    valuePropName="fileList"
+                    getValueFromEvent={(e) => e.fileList}
                   >
                     <div className="uploadFile d-flex justify-content-center align-items-center flex-column">
-                      <i className="icon fa-solid fa-upload"></i>
-                      <h6 className="file mt-2">Fayl əlavə et</h6>
-                      <p className="uploadFileText mt-5">
-                        Faylları buraya əlavə edin. Faylın maksimum 10 MB
-                        həcmində, png, txt, jpeg, jpg, pdf formatında fayl əlavə
-                        edə bilərsiniz.
-                      </p>
+                      <label htmlFor="file-upload" className="">
+                        {!selectedFile && (
+                          <i className="upload-icon fa fa-upload"></i>
+                        )}
+                      </label>
+                      <h6 className="file mt-2">
+                        {selectedFile ? selectedFile.name : "Fayl əlavə et"}
+                      </h6>
+                      {!selectedFile && (
+                        <p className="uploadFileText">
+                          Faylları buraya əlavə edin. Faylın maksimum 10 MB
+                          həcmində, png, txt, jpeg, jpg, pdf formatında fayl
+                          əlavə edə bilərsiniz.
+                        </p>
+                      )}
+                      <input
+                        id="file-upload"
+                        type="file"
+                        style={{ display: "none" }}
+                        onChange={handleChange}
+                      />
                     </div>
                   </Form.Item>
                 </Col>
@@ -236,17 +330,9 @@ const New = () => {
                     </Select>
                   </Form.Item>
 
-                  {/* <div className="custom-form-row "> */}
                   <Form.Item label="Əlaqə nömrəsi">
-                    {/* <Row gutter={24}> */}
                     <Col span={6}>
-                      <Form.Item
-                        name="prefix"
-                        noStyle
-                        // rules={[
-                        //   { required: true, message: "Bu xana boş qoyula bilməz!" },
-                        // ]}
-                      >
+                      <Form.Item name="prefix" noStyle>
                         <Select
                           onChange={(value) => setPrefix(value)}
                           className="select"
@@ -346,10 +432,36 @@ const New = () => {
               <Row>
                 <Col span={24} style={{ textAlign: "right" }}>
                   <Form.Item>
-                    <Button type="primary" htmlType="submit">
+                    <Button
+                      type="primary"
+                      htmlType="submit"
+                      onClick={showModal}
+                    >
                       <FontAwesomeIcon icon={faCheck} /> Şikayət yarat
                     </Button>
                   </Form.Item>
+
+                  {/* <Modal
+        visible={open}
+        onCancel={handleCancel}
+        footer={[
+          <Button key="ok" type="primary" onClick={handleSecondModalOk}>
+            OK
+          </Button>,
+        ]}
+      >
+        <div className="info-icon d-flex justify-content-center align-items-center flex-column mt-5"
+        style={{
+          color:"#3c6cb4"
+        }}
+        >
+          <FontAwesomeIcon icon={faInfo} size="3x" />
+        </div>
+        <p className="text-center mt-4" style={{ fontSize: "20px",color:"#3c6cb4"
+}}>
+         Yeni şikayət yaradıldı!
+        </p>
+      </Modal> */}
                 </Col>
               </Row>
             </Form>

@@ -34,7 +34,7 @@ const SideBar = () => {
       key: "2",
       icon: <FontAwesomeIcon icon={faBars} className="me-1" />,
       label: "Şikayətlər",
-      path: "/test1",
+      path: "/home",
     },
     {
       key: "3",

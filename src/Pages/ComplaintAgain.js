@@ -9,6 +9,7 @@ import {
   Input,
   Select,
   Option,
+  message,
 } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faInfo } from "@fortawesome/free-solid-svg-icons";
@@ -16,6 +17,9 @@ import "../Assets/AgainC.css";
 import Navbar from "../Components/NavBar";
 
 const ComplaintDetails = () => {
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [filePreview, setFilePreview] = useState(null);
+
   const { TextArea } = Input;
   const { Option } = Select;
 
@@ -44,6 +48,23 @@ const ComplaintDetails = () => {
   const showSecondModal = () => {
     setSecondModalOpen(true);
   };
+
+  
+  const handleFileSelect = (info) => {
+    if (info.file.status === "done") {
+      message.success(`${info.file.name} file uploaded successfully`);
+    }
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setFilePreview(reader.result);
+    };
+    reader.readAsDataURL(info.file.originFileObj);
+  };
+  const handleChange = (e) => {
+    const file = e.target.files[0];
+    setSelectedFile(file); 
+  };
+  
 
   return (
     <div className="container-fluid">
@@ -157,7 +178,7 @@ const ComplaintDetails = () => {
         </div>
         <Form>
           <Row gutter={[16, 16]} className="mt-5">
-            <Col xs={24} md={4} className="label-col me-4">
+            <Col xs={24} md={6} className="label-col me-4">
               <Form.Item
                 label="Şikayətə baxılmanın nəticəsi"
                 name="select1"
@@ -178,7 +199,7 @@ const ComplaintDetails = () => {
                 </Select>
               </Form.Item>
             </Col>
-            <Col xs={24} md={10} className="label-col">
+            <Col xs={24} md={8} className="label-col">
               <Form.Item
                 label="Şikayət mətni"
                 name="textarea"
@@ -195,24 +216,31 @@ const ComplaintDetails = () => {
                 />
               </Form.Item>
             </Col>
-            <Col xs={24} md={8} xl={6}>
-              <Form.Item
-                // label="Fayl Əlavə Et"
-                className="mt-5"
-                name="upload"
-                rules={[{ required: true, message: "" }]}
-              >
-                <div className="again-uploadFile d-flex justify-content-center align-items-center flex-column">
-                  <i className="icon fa-solid fa-upload"></i>
-                  <h6 className="file mt-2">Fayl əlavə et</h6>
-                  <p className="uploadFileText mt-5">
-                    Faylları buraya əlavə edin. Faylın maksimum 10 MB həcmində,
-                    png, txt, jpeg, jpg, pdf formatında fayl əlavə edə
-                    bilərsiniz.
-                  </p>
-                </div>
-              </Form.Item>
-            </Col>
+            <Col xs={24} md={8} xl={8}>
+      <Form.Item
+        className="mt-5"
+        name="upload"
+        valuePropName="fileList"
+        getValueFromEvent={(e) => e.fileList}
+      >
+        <div className="uploadFile d-flex justify-content-center align-items-center flex-column">
+          <label htmlFor="file-upload" className="">
+          {!selectedFile && (
+            <i className="upload-icon fa fa-upload"></i>
+          )}
+
+          </label>
+          <h6 className="file mt-2">{selectedFile ? selectedFile.name : 'Fayl əlavə et'}</h6>
+          {!selectedFile && (
+            <p className="uploadFileText">
+              Faylları buraya əlavə edin. Faylın maksimum 10 MB həcmində, png, txt, jpeg, jpg, pdf
+              formatında fayl əlavə edə bilərsiniz.
+            </p>
+          )}
+          <input id="file-upload" type="file" style={{ display: 'none' }} onChange={handleChange} />
+        </div>
+      </Form.Item>
+    </Col>
           </Row>
         </Form>
       </div>
