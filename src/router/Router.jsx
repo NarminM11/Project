@@ -1,36 +1,35 @@
 import React from "react";
 import Center from "../Components/Center";
-import SideBar from "../Components/SideBar";
-import Test from "../Components/Test";
 import HomePage from "../Pages/HomePage";
 import New from "../Components/New";
 import ComplaintInfo from '../Pages/ComplaintInfo';
-import ComplaintAgain from '../Pages/ComplaintAgain'
+import ComplaintAgain from '../Pages/ComplaintAgain';
+import { Navigate } from 'react-router-dom';
+
 export const ROUTES = [
   {
     path: "/",
     element: <HomePage />,
     children: [
       {
-        element: <SideBar />,
-        children: [
-          {
-            path: "home",
-            element: <Center />,
-          },
-          {
-            path: "new",
-            element: <New />,
-          },
-          {
-            path: "info",
-            element: <ComplaintInfo />,
-          },
-          {
-            path: "again",
-            element: <ComplaintAgain/>,
-          },
-        ],
+        path: "/",
+        element: <Navigate to="/home" replace />,
+      },
+      {
+        path: "home",
+        element: <Center />,
+      },
+      {
+        path: "new",
+        element: <New />,
+      },
+      {
+        path: "info",
+        element: <ComplaintInfo />,
+      },
+      {
+        path: "again",
+        element: <ComplaintAgain />,
       },
     ],
   },

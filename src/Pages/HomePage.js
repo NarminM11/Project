@@ -1,9 +1,15 @@
 import React from "react";
-import SideBar from "../Components/SideBar";
-import Center from "../Components/Center";
-import NavBar from "../Components/NavBar";
 import { Outlet } from "react-router-dom";
+import SideBar from "../Components/SideBar";
+import "../Assets/HomePage.css"; // Import the CSS file
 
 export default function HomePage() {
-  return <Outlet />;
+  return (
+    <div className="homepage-layout">
+      <SideBar />
+      {/* <div className="content">
+        <Outlet />
+      </div> */}
+    </div>
+  );
 }

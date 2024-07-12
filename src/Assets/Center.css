@@ -33,10 +33,11 @@ table {
 }
 
 .center-content {
-  width: 100%;
-  /* padding: 30px; */
+  width: auto;
   margin: 0 auto;
   position: relative;
+  padding: 20px;
+
 }
 
 .text-center {
@@ -49,3 +50,4 @@ table {
   font-size: 20px;
   background-color: red;
 }
+
