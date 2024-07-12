@@ -1,5 +1,5 @@
 .again-text {
-  background-color: azure;
+  /* background-color: azure; */
   border-radius: 6px;
 }
 
@@ -9,4 +9,9 @@
   border: 1px solid rgb(201, 197, 197);
   background-color: #f3f3f3;
   border-radius: 10px;
+}
+
+.gonder{
+  display: flex;
+  text-align: right;
 }

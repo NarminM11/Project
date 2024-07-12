@@ -8,7 +8,6 @@ import {
   Modal,
   Input,
   Select,
-  Option,
   message,
 } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,18 +18,35 @@ import Navbar from "../Components/NavBar";
 const ComplaintDetails = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [filePreview, setFilePreview] = useState(null);
-
+  const [selectedValue, setSelectedValue] = useState(null);
+  const [form] = Form.useForm(); 
   const { TextArea } = Input;
   const { Option } = Select;
 
   const [open, setOpen] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [secondModalOpen, setSecondModalOpen] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false); 
 
   const showModal = () => {
-    setOpen(true);
+    if (isFormValid) { 
+      setOpen(true);
+    } else {
+      form.validateFields().then(() => {
+        setIsFormValid(true);
+      }).catch((errorInfo) => {
+        console.log("Validation failed:", errorInfo);
+      });
+    }
   };
-
+  const validateForm = () => {
+    form.validateFields().then(() => {
+      setIsFormValid(true);
+      showModal(); 
+    }).catch((errorInfo) => {
+      console.log("Validation failed:", errorInfo);
+    });
+  };
   const handleOk = () => {
     setConfirmLoading(true);
     setTimeout(() => {
@@ -49,7 +65,6 @@ const ComplaintDetails = () => {
     setSecondModalOpen(true);
   };
 
-  
   const handleFileSelect = (info) => {
     if (info.file.status === "done") {
       message.success(`${info.file.name} file uploaded successfully`);
@@ -60,11 +75,15 @@ const ComplaintDetails = () => {
     };
     reader.readAsDataURL(info.file.originFileObj);
   };
+
   const handleChange = (e) => {
     const file = e.target.files[0];
-    setSelectedFile(file); 
+    setSelectedFile(file);
   };
-  
+
+  const handleSelectChange = (value) => {
+    setSelectedValue(value);
+  };
 
   return (
     <div className="container-fluid">
@@ -146,18 +165,20 @@ const ComplaintDetails = () => {
           </div>
           <div className="mt-3 d-flex justify-content-center align-items-center">
             <Steps
-              current={0}
+              current={3}
               percent={60}
               items={[
                 {
                   title: "Baxılır",
-                  subTitle: "00:00:08",
+                  subTitle: "15.08.2023",
                 },
                 {
                   title: "Cavanlandırılır",
+                  subTitle: "30.08.2023",
                 },
                 {
                   title: "Tamamlandı",
+                  subTitle: "01.09.2023",
                 },
               ]}
             />
@@ -173,10 +194,10 @@ const ComplaintDetails = () => {
       </div>
 
       <div>
-        <div className="header-content mt-5" style={{ fontSize: "18px" }}>
+      <div className="header-content mt-5" style={{ fontSize: "18px" }}>
           Təkrar şikayət
         </div>
-        <Form>
+        <Form form={form}>
           <Row gutter={[16, 16]} className="mt-5">
             <Col xs={24} md={6} className="label-col me-4">
               <Form.Item
@@ -192,10 +213,10 @@ const ComplaintDetails = () => {
                   className="custom-select"
                   placeholder="Seçim edin"
                   style={{ width: "100%" }}
+                  onChange={handleSelectChange}
                 >
-                  <Option value="option1">Option 1</Option>
-                  <Option value="option2">Option 2</Option>
-                  <Option value="option3">Option 3</Option>
+                  <Option value="option1">Qismən təmin olundu</Option>
+                  <Option value="option2">Təmin olunmadı</Option>
                 </Select>
               </Form.Item>
             </Col>
@@ -217,80 +238,85 @@ const ComplaintDetails = () => {
               </Form.Item>
             </Col>
             <Col xs={24} md={8} xl={8}>
-      <Form.Item
-        className="mt-5"
-        name="upload"
-        valuePropName="fileList"
-        getValueFromEvent={(e) => e.fileList}
-      >
-        <div className="uploadFile d-flex justify-content-center align-items-center flex-column">
-          <label htmlFor="file-upload" className="">
-          {!selectedFile && (
-            <i className="upload-icon fa fa-upload"></i>
-          )}
+              <Form.Item
+                className="mt-5"
+                name="upload"
+                valuePropName="fileList"
+                getValueFromEvent={(e) => e.fileList}
+              >
+                <div className="uploadFile d-flex justify-content-center align-items-center flex-column">
+                  <label htmlFor="file-upload" className="">
+                    {!selectedFile && (
+                      <i className="upload-icon fa fa-upload"></i>
+                    )}
+                  </label>
+                  <h6 className="file mt-2">{selectedFile ? selectedFile.name : 'Fayl əlavə et'}</h6>
+                  {!selectedFile && (
+                    <p className="uploadFileText">
+                      Faylları buraya əlavə edin. Faylın maksimum 10 MB həcmində, png, txt, jpeg, jpg, pdf
+                      formatında fayl əlavə edə bilərsiniz.
+                    </p>
+                  )}
+                  <input id="file-upload" type="file" style={{ display: 'none' }} onChange={handleChange} />
+                </div>
+              </Form.Item>
+            </Col>
 
-          </label>
-          <h6 className="file mt-2">{selectedFile ? selectedFile.name : 'Fayl əlavə et'}</h6>
-          {!selectedFile && (
-            <p className="uploadFileText">
-              Faylları buraya əlavə edin. Faylın maksimum 10 MB həcmində, png, txt, jpeg, jpg, pdf
-              formatında fayl əlavə edə bilərsiniz.
-            </p>
-          )}
-          <input id="file-upload" type="file" style={{ display: 'none' }} onChange={handleChange} />
-        </div>
-      </Form.Item>
-    </Col>
+            <div className="cancel-button mt-2 mb-4 d-flex justify-content-end">
+              <Button
+                type="primary"
+                htmlType="submit"
+                onClick={validateForm} 
+                style={{
+                  width: "auto",
+                  backgroundColor: selectedValue ? "#ce2029" : "grey",
+                }}
+                className=""
+              >
+                <FontAwesomeIcon icon={faCheck} /> Şikayəti ISP-yə göndər
+              </Button>
+
+              <Button
+                type="primary"
+                htmlType="submit"
+                onClick={validateForm} 
+                style={{
+                  width: "auto",
+                  backgroundColor: selectedValue ? "#3c6cb4" : "grey",
+                }}
+                className="ms-4"
+              >
+                <FontAwesomeIcon icon={faCheck} /> Şikayəti İKTA-ya göndər
+              </Button>
+            </div>
+
+            <Modal
+              visible={open}
+              onCancel={handleCancel}
+              footer={[
+                <Button key="ok" type="primary" onClick={handleOk}>
+                  OK
+                </Button>,
+              ]}
+            >
+              <div
+                className="info-icon d-flex justify-content-center align-items-center flex-column mt-5"
+                style={{
+                  color: "#3c6cb4",
+                }}
+              >
+                <FontAwesomeIcon icon={faInfo} size="3x" />
+              </div>
+              <p
+                className="text-center mt-4"
+                style={{ fontSize: "20px", color: "#3c6cb4" }}
+              >
+                Şikayətiniz Ləğv Edildi
+              </p>
+            </Modal>
           </Row>
         </Form>
       </div>
-
-      {/* <div className="cancel-button mt-4 d-flex justify-content-end">
-        <Form.Item className="cancel">
-          <Button type="primary" onClick={showModal}>
-            Şikayəti ləğv et
-          </Button>
-        </Form.Item>
-      </div> */}
-      {/* 
-      <Modal
-        title="Şikayəti ləğv etmək səbəbiniz nədir?"
-        visible={open}
-        onOk={handleOk}
-        confirmLoading={confirmLoading}
-        onCancel={handleCancel}
-        okText="Şikayəti ləğv et"
-        cancelText="Bağla"
-        okButtonProps={{ style: { width: "220px", fontSize: "18px" } }}
-        cancelButtonProps={{ style: { width: "120px", fontSize: "18px" } }}
-      >
-        <Form.Item
-          name="textarea"
-          rules={[{ required: true, message: "Bu xana boş qoyula bilməz!" }]}
-        >
-          <Input.TextArea
-            rows={4}
-            placeholder="Şikayəti ləğv etmə səbəbinizi daxil edin."
-          />
-        </Form.Item>
-      </Modal> */}
-
-      {/* <Modal
-        visible={secondModalOpen}
-        onCancel={handleSecondModalCancel}
-        footer={[
-          <Button key="ok" type="primary" onClick={handleSecondModalOk}>
-            OK
-          </Button>,
-        ]}
-      >
-        <div className="info-icon d-flex justify-content-center align-items-center flex-column mt-5">
-          <FontAwesomeIcon icon={faInfo} size="3x" />
-        </div>
-        <p className="text-center mt-4" style={{ fontSize: "20px" }}>
-          Şikayətiniz Ləğv Edildi
-        </p>
-      </Modal> */}
     </div>
   );
 };

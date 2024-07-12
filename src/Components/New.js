@@ -28,7 +28,33 @@ const New = () => {
   const [open, setOpen] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [secondModalOpen, setSecondModalOpen] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
 
+  const showModal = () => {
+    if (isFormValid) {
+      setOpen(true);
+    } else {
+      form
+        .validateFields()
+        .then(() => {
+          setIsFormValid(true);
+        })
+        .catch((errorInfo) => {
+          console.log("Validation failed:", errorInfo);
+        });
+    }
+  };
+  const validateForm = () => {
+    form
+      .validateFields()
+      .then(() => {
+        setIsFormValid(true);
+        showModal();
+      })
+      .catch((errorInfo) => {
+        console.log("Validation failed:", errorInfo);
+      });
+  };
   const formItemLayout = {
     labelCol: { span: 24 },
     wrapperCol: { span: 24 },
@@ -56,9 +82,6 @@ const New = () => {
     setSelectedFile(file);
   };
 
-  const showModal = () => {
-    setOpen(true);
-  };
   const handleSecondModalOk = () => {
     setSecondModalOpen(false);
     //actions for clicking "OK" button on the second modal
@@ -118,7 +141,7 @@ const New = () => {
           <div className="col-md-24">
             <Form {...formItemLayout} onFinish={onFinish} form={form}>
               <Row gutter={[16, 16]}>
-                <Col xs={24} md={8}>
+                <Col xs={24} md={24} xl={8}>
                   <Form.Item
                     label="Şikayət etdiyiniz fəaliyyət sahəsi"
                     name="select1"
@@ -178,8 +201,8 @@ const New = () => {
                       value={thirdSelect}
                       disabled={!secondSelect}
                     >
-                      {secondSelect &&
-                        optionsData.select3[secondSelect]?.map((option) => (
+                      {firstSelect &&
+                        optionsData.select3[firstSelect]?.map((option) => (
                           <Option key={option.value} value={option.value}>
                             {option.label}
                           </Option>
@@ -210,7 +233,7 @@ const New = () => {
                     </Select>
                   </Form.Item>
                 </Col>
-                <Col xs={24} md={8}>
+                <Col xs={24} md={24} xl={8}>
                   <Form.Item
                     label="Abunəçi kodu"
                     name="input"
@@ -230,7 +253,7 @@ const New = () => {
                     <TextArea rows={4} placeholder="Maksimum 1000 simvol" />
                   </Form.Item>
                 </Col>
-                <Col xs={24} md={8} xl={8}>
+                <Col xs={24} md={24} xl={8}>
                   <Form.Item
                     className="mt-5"
                     name="upload"
@@ -435,33 +458,40 @@ const New = () => {
                     <Button
                       type="primary"
                       htmlType="submit"
-                      onClick={showModal}
+                      onClick={validateForm}
                     >
                       <FontAwesomeIcon icon={faCheck} /> Şikayət yarat
                     </Button>
                   </Form.Item>
 
-                  {/* <Modal
-        visible={open}
-        onCancel={handleCancel}
-        footer={[
-          <Button key="ok" type="primary" onClick={handleSecondModalOk}>
-            OK
-          </Button>,
-        ]}
-      >
-        <div className="info-icon d-flex justify-content-center align-items-center flex-column mt-5"
-        style={{
-          color:"#3c6cb4"
-        }}
-        >
-          <FontAwesomeIcon icon={faInfo} size="3x" />
-        </div>
-        <p className="text-center mt-4" style={{ fontSize: "20px",color:"#3c6cb4"
-}}>
-         Yeni şikayət yaradıldı!
-        </p>
-      </Modal> */}
+                  <Modal
+                    visible={open}
+                    onCancel={handleCancel}
+                    footer={[
+                      <Button
+                        key="ok"
+                        type="primary"
+                        onClick={handleSecondModalOk}
+                      >
+                        OK
+                      </Button>,
+                    ]}
+                  >
+                    <div
+                      className="info-icon d-flex justify-content-center align-items-center flex-column mt-5"
+                      style={{
+                        color: "#3c6cb4",
+                      }}
+                    >
+                      <FontAwesomeIcon icon={faInfo} size="3x" />
+                    </div>
+                    <p
+                      className="text-center mt-4"
+                      style={{ fontSize: "20px", color: "#3c6cb4" }}
+                    >
+                      Yeni şikayət yaradıldı!
+                    </p>
+                  </Modal>
                 </Col>
               </Row>
             </Form>

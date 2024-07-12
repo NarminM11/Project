@@ -1,11 +1,12 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ROUTES } from "./router/Router.jsx";
-
+import Home from '../src/Pages/HomePage.js'
 const routes = createBrowserRouter(ROUTES);
 
 export default function App() {
   return (
+    // <Home />
     <RouterProvider router={routes} />
     // <div>
     //   <NavBar />

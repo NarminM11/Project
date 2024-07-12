@@ -343,181 +343,233 @@
   "select3": {
     "internet": [
       {
-        "value": "azinteletecom",
-        "label": "Əlavə servis xidmətləri ilə bağlı şikayət (əlavə dəyr xidmətləri o cümlədən  OTT)"
+        "value": "internet-additional-service-complaints",
+        "label": "Əlavə servis xidmətləri ilə bağlı şikayət (əlavə dəyr xidmətləri o cümlədən OTT)"
       },
       {
-        "value": "aztelekom-service",
+        "value": "internet-service-dissatisfaction",
         "label": "Əməkdaşlardan və ya xidmətdən narazılıq"
       },
       {
-        "value": "delta-telekom",
+        "value": "internet-infrastructure-complaints",
         "label": "İnfrastrukturla əlaqədar şikayətlər"
       },
       {
-        "value": "azeurotel",
+        "value": "internet-service-malfunction",
         "label": "Xidmətin işləməməsi ilə bağlı şikayət"
       },
       {
-        "value": "aztelekom-quality",
+        "value": "internet-service-quality-complaints",
         "label": "Xidmətin keyfiyyəti ilə bağlı şikayət"
       },
       {
-        "value": "baktekom",
+        "value": "internet-service-connection-complaints",
         "label": "Xidmətin qoşulması ilə bağlı şikayət (abunə əməliyyatları)"
       },
-      { "value": "transeurocom", "label": "Xitam (xidmətin dayandırılması)" },
       {
-        "value": "ultel-payment",
+        "value": "internet-service-termination",
+        "label": "Xitam (xidmətin dayandırılması)"
+      },
+      {
+        "value": "internet-payment-correction-complaints",
         "label": "Ödənişlərlə bağlı-korreksiya ilə bağlı şikayət (fakturalanma)"
       },
-      { "value": "ultel-tariff", "label": "Tariflərlə bağlı şikayət" },
       {
-        "value": "ultel-provider",
+        "value": "internet-tariff-complaints",
+        "label": "Tariflərlə bağlı şikayət"
+      },
+      {
+        "value": "internet-provider-dissatisfaction",
         "label": "Operator və ya provayderin ümumi fəaliyyətindən narazılıq"
       }
     ],
     "t-rabite": [
       {
-        "value": "azinteletecom",
-        "label": "Əlavə servis xidmətləri ilə bağlı şikayət (əlavə dəyr xidmətləri o cümlədən  OTT)"
+        "value": "telefon-additional-service-complaints",
+        "label": "Əlavə servis xidmətləri ilə bağlı şikayət (əlavə dəyr xidmətləri o cümlədən OTT)"
       },
       {
-        "value": "aztelekom-service",
+        "value": "telefon-service-dissatisfaction",
         "label": "Əməkdaşlardan və ya xidmətdən narazılıq"
       },
       {
-        "value": "delta-telekom",
+        "value": "telefon-infrastructure-complaints",
         "label": "İnfrastrukturla əlaqədar şikayətlər"
       },
       {
-        "value": "azeurotel",
+        "value": "telefon-service-malfunction",
         "label": "Xidmətin işləməməsi ilə bağlı şikayət"
       },
       {
-        "value": "aztelekom-quality",
+        "value": "telefon-service-quality-complaints",
         "label": "Xidmətin keyfiyyəti ilə bağlı şikayət"
       },
       {
-        "value": "baktekom",
+        "value": "telefon-service-connection-complaints",
         "label": "Xidmətin qoşulması ilə bağlı şikayət (abunə əməliyyatları)"
       },
-      { "value": "transeurocom", "label": "Xitam (xidmətin dayandırılması)" },
       {
-        "value": "ultel-payment",
+        "value": "telefon-service-termination",
+        "label": "Xitam (xidmətin dayandırılması)"
+      },
+      {
+        "value": "telefon-payment-correction-complaints",
         "label": "Ödənişlərlə bağlı-korreksiya ilə bağlı şikayət (fakturalanma)"
       },
-      { "value": "ultel-tariff", "label": "Tariflərlə bağlı şikayət" },
       {
-        "value": "ultel-provider",
+        "value": "telefon-tariff-complaints",
+        "label": "Tariflərlə bağlı şikayət"
+      },
+      {
+        "value": "telefon-provider-dissatisfaction",
         "label": "Operator və ya provayderin ümumi fəaliyyətindən narazılıq"
       }
     ],
     "m-internet": [
       {
-        "value": "azinteletecom",
-        "label": "Əlavə servis xidmətləri ilə bağlı şikayət (əlavə dəyr xidmətləri o cümlədən  OTT)"
+        "value": "mobil-additional-service-complaints",
+        "label": "Əlavə servis xidmətləri ilə bağlı şikayət (əlavə dəyr xidmətləri o cümlədən OTT)"
       },
       {
-        "value": "aztelekom-service",
+        "value": "mobil-service-dissatisfaction",
         "label": "Əməkdaşlardan və ya xidmətdən narazılıq"
       },
       {
-        "value": "delta-telekom",
+        "value": "mobil-infrastructure-complaints",
         "label": "İnfrastrukturla əlaqədar şikayətlər"
       },
       {
-        "value": "azeurotel",
+        "value": "mobil-service-malfunction",
         "label": "Xidmətin işləməməsi ilə bağlı şikayət"
       },
       {
-        "value": "aztelekom-quality",
+        "value": "mobil-service-quality-complaints",
         "label": "Xidmətin keyfiyyəti ilə bağlı şikayət"
       },
       {
-        "value": "baktekom",
+        "value": "mobil-service-connection-complaints",
         "label": "Xidmətin qoşulması ilə bağlı şikayət (abunə əməliyyatları)"
       },
-      { "value": "transeurocom", "label": "Xitam (xidmətin dayandırılması)" },
       {
-        "value": "ultel-payment",
+        "value": "mobil-service-termination",
+        "label": "Xitam (xidmətin dayandırılması)"
+      },
+      {
+        "value": "mobil-payment-correction-complaints",
         "label": "Ödənişlərlə bağlı-korreksiya ilə bağlı şikayət (fakturalanma)"
       },
-      { "value": "ultel-tariff", "label": "Tariflərlə bağlı şikayət" },
       {
-        "value": "ultel-provider",
+        "value": "mobil-tariff-complaints",
+        "label": "Tariflərlə bağlı şikayət"
+      },
+      {
+        "value": "mobil-provider-dissatisfaction",
         "label": "Operator və ya provayderin ümumi fəaliyyətindən narazılıq"
       }
     ],
     "m-rabite": [
       {
-        "value": "azinteletecom",
-        "label": "Əlavə servis xidmətləri ilə bağlı şikayət (əlavə dəyr xidmətləri o cümlədən  OTT)"
+        "value": "rabite-additional-service-complaints",
+        "label": "Əlavə servis xidmətləri ilə bağlı şikayət (əlavə dəyr xidmətləri o cümlədən OTT)"
       },
       {
-        "value": "aztelekom-service",
+        "value": "rabite-service-dissatisfaction",
         "label": "Əməkdaşlardan və ya xidmətdən narazılıq"
       },
       {
-        "value": "delta-telekom",
+        "value": "rabite-infrastructure-complaints",
         "label": "İnfrastrukturla əlaqədar şikayətlər"
       },
       {
-        "value": "azeurotel",
+        "value": "rabite-service-malfunction",
         "label": "Xidmətin işləməməsi ilə bağlı şikayət"
       },
       {
-        "value": "aztelekom-quality",
+        "value": "rabite-service-quality-complaints",
         "label": "Xidmətin keyfiyyəti ilə bağlı şikayət"
       },
       {
-        "value": "baktekom",
+        "value": "rabite-service-connection-complaints",
         "label": "Xidmətin qoşulması ilə bağlı şikayət (abunə əməliyyatları)"
       },
-      { "value": "transeurocom", "label": "Xitam (xidmətin dayandırılması)" },
       {
-        "value": "ultel-payment",
+        "value": "rabite-service-termination",
+        "label": "Xitam (xidmətin dayandırılması)"
+      },
+      {
+        "value": "rabite-payment-correction-complaints",
         "label": "Ödənişlərlə bağlı-korreksiya ilə bağlı şikayət (fakturalanma)"
       },
-      { "value": "ultel-tariff", "label": "Tariflərlə bağlı şikayət" },
       {
-        "value": "ultel-provider",
+        "value": "rabite-tariff-complaints",
+        "label": "Tariflərlə bağlı şikayət"
+      },
+      {
+        "value": "rabite-provider-dissatisfaction",
         "label": "Operator və ya provayderin ümumi fəaliyyətindən narazılıq"
       }
     ],
     "u-poct": [
       {
-        "value": "postal-service",
+        "value": "u-postal-financial-service-complaint",
         "label": "Poçt/poçt amliyyə xidmətləri barədə şikayət"
       },
       {
-        "value": "postal-staff",
+        "value": "u-postal-staff-complaint",
         "label": "Poçt obyekti və əməkdaşları barədə şikayət"
       },
       {
-        "value": "customer-service",
+        "value": "u-customer-service-complaint",
         "label": "Müştəri xidmətləri barədə şikayət"
       }
     ],
     "s-poct": [
       {
-        "value": "post-shipments",
+        "value": "s-postal-financial-service-complaint",
         "label": "Poçt göndərişləri barədə şikayət"
       },
       {
-        "value": "post-office-staff",
+        "value": "s-postal-staff-complaint",
         "label": "Poçt obyekti və əməkdaşları barədə şikayət"
       },
       {
-        "value": "customer-service",
+        "value": "s-postal-staff-complaint",
         "label": "Müştəri xidmətləri barədə şikayət"
       }
     ]
   },
 
-  "select4": [
-    { "value": "option1", "label": "Option 1" },
-    { "value": "option2", "label": "Option 2" },
-    { "value": "option3", "label": "Option 3" }
-  ]
-}
+  "select4": {
+    "internet-additional-service-complaints":[
+      { "value": "option1", "label": "Canlı yayımda video və ya oyunlarda ekran təsvirlərinin pozuntusu təhrif olunması" },
+      { "value": "option2", "label": "Ötürülən məlumatın natamam çatması" },
+      { "value": "option3", "label": "Video və ya danışıqlarda donmalar və ya gecikmələr" },
+      { "value": "option4", "label": "Videonun və danışığın itkilərlə çatması" }
+    ],
+    "internet-service-dissatisfaction":[
+      { "value": "option1", "label": "Çağrı mərkəzi texniki xidmət mərkəzinə zənglər cavablandırılması uzun zaman alır" },
+      { "value": "option2", "label": "Şikayətin aradan qaldırılması üçünn müraciətin icrası həddən artıq gecikdirilir" },
+      { "value": "option3", "label": "Vebsaytın olmaması və ya işləməməsi" }
+    ],
+    "internet-infrastructure-complaints":[
+      { "value": "option1", "label": "Dirəklərin basdırılması barədə" },
+      { "value": "option2", "label": "Xətlərin çəkilməsi barədə" }
+    ],
+    "internet-service-malfunction":[
+      { "value": "option1", "label": "Xidmət işləməməsi" }
+    ],
+    "internet-service-quality-complaints":[
+      { "value": "option1", "label": "Abonentlə bağlanan müqavilədə göstərilən məlumat göndərmə sürəti təmin olunmur" },
+      { "value": "option2", "label": "Abonentlə bağlanan müqavilədə göstərilən məlumat yükləmə sürəti təmin olunmur" },
+      { "value": "option3", "label": "Canlı yayımda video və ya oyunlarda ekran təsvirlərinin pozuntusu təhrif olunması" },
+      { "value": "option4", "label": "Qoşulma gecikir" },
+      { "value": "option5", "label": "Video və ya danışıqlarda donmalar və ya gecikmələr" },
+      { "value": "option6", "label": "Videonun və danışığın itkilərlə çatması" },
+      { "value": "option7", "label": "Ötürülən məlumatın natamam çatması" }
+    ]
+    }
+  }
+
+  
+ 
+
