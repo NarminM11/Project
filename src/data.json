@@ -540,36 +540,59 @@
   },
 
   "select4": {
-    "internet-additional-service-complaints":[
-      { "value": "option1", "label": "Canlı yayımda video və ya oyunlarda ekran təsvirlərinin pozuntusu təhrif olunması" },
+    "internet-additional-service-complaints": [
+      {
+        "value": "option1",
+        "label": "Canlı yayımda video və ya oyunlarda ekran təsvirlərinin pozuntusu təhrif olunması"
+      },
       { "value": "option2", "label": "Ötürülən məlumatın natamam çatması" },
-      { "value": "option3", "label": "Video və ya danışıqlarda donmalar və ya gecikmələr" },
+      {
+        "value": "option3",
+        "label": "Video və ya danışıqlarda donmalar və ya gecikmələr"
+      },
       { "value": "option4", "label": "Videonun və danışığın itkilərlə çatması" }
     ],
-    "internet-service-dissatisfaction":[
-      { "value": "option1", "label": "Çağrı mərkəzi texniki xidmət mərkəzinə zənglər cavablandırılması uzun zaman alır" },
-      { "value": "option2", "label": "Şikayətin aradan qaldırılması üçünn müraciətin icrası həddən artıq gecikdirilir" },
+    "internet-service-dissatisfaction": [
+      {
+        "value": "option1",
+        "label": "Çağrı mərkəzi texniki xidmət mərkəzinə zənglər cavablandırılması uzun zaman alır"
+      },
+      {
+        "value": "option2",
+        "label": "Şikayətin aradan qaldırılması üçünn müraciətin icrası həddən artıq gecikdirilir"
+      },
       { "value": "option3", "label": "Vebsaytın olmaması və ya işləməməsi" }
     ],
-    "internet-infrastructure-complaints":[
+    "internet-infrastructure-complaints": [
       { "value": "option1", "label": "Dirəklərin basdırılması barədə" },
       { "value": "option2", "label": "Xətlərin çəkilməsi barədə" }
     ],
-    "internet-service-malfunction":[
+    "internet-service-malfunction": [
       { "value": "option1", "label": "Xidmət işləməməsi" }
     ],
-    "internet-service-quality-complaints":[
-      { "value": "option1", "label": "Abonentlə bağlanan müqavilədə göstərilən məlumat göndərmə sürəti təmin olunmur" },
-      { "value": "option2", "label": "Abonentlə bağlanan müqavilədə göstərilən məlumat yükləmə sürəti təmin olunmur" },
-      { "value": "option3", "label": "Canlı yayımda video və ya oyunlarda ekran təsvirlərinin pozuntusu təhrif olunması" },
+    "internet-service-quality-complaints": [
+      {
+        "value": "option1",
+        "label": "Abonentlə bağlanan müqavilədə göstərilən məlumat göndərmə sürəti təmin olunmur"
+      },
+      {
+        "value": "option2",
+        "label": "Abonentlə bağlanan müqavilədə göstərilən məlumat yükləmə sürəti təmin olunmur"
+      },
+      {
+        "value": "option3",
+        "label": "Canlı yayımda video və ya oyunlarda ekran təsvirlərinin pozuntusu təhrif olunması"
+      },
       { "value": "option4", "label": "Qoşulma gecikir" },
-      { "value": "option5", "label": "Video və ya danışıqlarda donmalar və ya gecikmələr" },
-      { "value": "option6", "label": "Videonun və danışığın itkilərlə çatması" },
+      {
+        "value": "option5",
+        "label": "Video və ya danışıqlarda donmalar və ya gecikmələr"
+      },
+      {
+        "value": "option6",
+        "label": "Videonun və danışığın itkilərlə çatması"
+      },
       { "value": "option7", "label": "Ötürülən məlumatın natamam çatması" }
     ]
-    }
   }
-
-  
- 
-
+}

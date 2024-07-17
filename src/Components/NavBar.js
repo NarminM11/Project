@@ -5,7 +5,7 @@ import "../Assets/Navbar.css";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-light bg-light">
-      <a className="navbar-brand" href="#">
+      <a className="navbar-brand" href="https://icta.az/">
         <img
           src="https://e-complaint.icta.az/assets/imgs/gradient_black.png"
           className="d-inline-block align-top"
@@ -13,7 +13,6 @@ const Navbar = () => {
           height="100%"
           alt=""
         />
-        
       </a>
       <div className="nav-word ms-auto d-flex align-items-center">
         <span>Mürşüdova Nərmin Rauf qızı</span>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Row, Col, Steps, Form, Button, Modal, Input } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faInfo } from "@fortawesome/free-solid-svg-icons";
@@ -57,38 +58,46 @@ const ComplaintDetails = () => {
           <div className="row">
             <div className="col-md-12 ms-4">
               <Row gutter={[16, 16]}>
-                <Col xs={10} md={8} xl={4} className="label-col">
+                <Col xs={24} md={2} className="label-col">
                   <p>Şikayət nömrəsi:</p>
                   <p>Şikayət etdiyiniz fəaliyyət sahəsi:</p>
                   <p>Şikayətçi olduğunuz şirkət:</p>
                   <p>Şikayət xarakteristikası:</p>
                   <p>Abunəçi kodu:</p>
                 </Col>
-                <Col xs={8} md={6} xl={4} className="value-col">
-                  <p>10234</p>
+                <Col xs={24} md={2} className="value-col">
+                  <p>11667</p>
                   <p>İnternet(GPON, ADSL və s.)</p>
                   <p>"ADANET" MMC</p>
                   <p>Xidmətə qoşulma</p>
                   <p>9999997888</p>
                 </Col>
-                <Col xs={10} md={4} xl={4} className="label-col">
+                <Col xs={24} md={3} className="label-col">
+                  <p>Əlaqəli şikayətin nömrəsi:</p>
+                </Col>
+                <Col xs={24} md={2} className="value-col">
+                  <Link to="/againInfo" className="no-decoration">
+                    <p>10234</p>
+                  </Link>
+                </Col>
+                <Col xs={24} md={3} className="label-col">
                   <p>Şəhər:</p>
                   <p>Bina:</p>
                   <p>Əlaqə nömrəsi:</p>
                   <p>E-poçt:</p>
                 </Col>
-                <Col xs={8} md={5} xl={4} className="value-col">
+                <Col xs={24} md={4} className="value-col">
                   <p>Bakı</p>
                   <p>15</p>
                   <p>+99455555555</p>
                   <p>test.mail@icta.az</p>
                 </Col>
-                <Col xs={10} md={6} xl={4} className="label-col">
+                <Col xs={24} md={3} className="label-col">
                   <p>Rayon:</p>
                   <p>Mənzil:</p>
                   <p>Statisionar telefon:</p>
                 </Col>
-                <Col xs={8} md={4} xl={4} className="value-col">
+                <Col xs={24} md={3} className="value-col">
                   <p>Yasamal</p>
                   <p>12</p>
                   <p>+994125555555</p>
@@ -100,12 +109,12 @@ const ComplaintDetails = () => {
 
         <div className="complaint-details2 mt-4">
           <Row gutter={[16, 16]}>
-            <Col xs={12} md={4} className="label-col">
+            <Col xs={24} md={4} className="label-col">
               <p>Şikayətin mövzusu:</p>
               <p>Şikayətin mətni:</p>
               <p>Fayl:</p>
             </Col>
-            <Col xs={12} md={10} className="value-col">
+            <Col xs={24} md={10} className="value-col">
               <p>Xidmətə qoşulma</p>
               <p>
                 Müraciətin üzərindən uzun müddət keçməsinə baxmayaraq qoşulma
@@ -184,9 +193,12 @@ const ComplaintDetails = () => {
         visible={secondModalOpen}
         onCancel={handleSecondModalCancel}
         footer={[
-          <Button key="ok" type="primary" onClick={handleSecondModalOk}>
-            OK
-          </Button>,
+          <Link to="/home">
+            {" "}
+            <Button key="ok" type="primary" onClick={handleOk}>
+              OK
+            </Button>
+          </Link>,
         ]}
       >
         <div

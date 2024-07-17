@@ -36,8 +36,7 @@ table {
   width: auto;
   margin: 0 auto;
   position: relative;
-  padding: 20px;
-
+  /* padding: 20px; */
 }
 
 .text-center {
@@ -45,9 +44,10 @@ table {
   vertical-align: middle;
 }
 
-
-.eye-icon{
+.eye-icon {
   font-size: 20px;
-  background-color: red;
 }
 
+.again-button {
+  background-color: #3c6cb4;
+}

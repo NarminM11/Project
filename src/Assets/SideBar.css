@@ -100,12 +100,12 @@
   font-size: 16px;
   width: 74px;
   height: 64px;
-  color:white;
+  color: white;
 }
 
 .custom-menu {
   flex: 1;
-  color:white;
+  color: white;
 }
 
 .ant-layout {
@@ -131,7 +131,6 @@
   flex-direction: column;
   height: 100%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
 }
 
 .logout-icon {
@@ -142,17 +141,14 @@
   display: flex;
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
 }
-.icon{
-  color:white;
+.icon {
+  color: white;
   font-size: 20px;
-
 }
 .menu-button-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 64px; 
+  height: 64px;
 }
-

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Row,
   Col,
@@ -12,40 +13,48 @@ import {
 } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faInfo } from "@fortawesome/free-solid-svg-icons";
+import { withRouter } from "react-router-dom";
+
 import "../Assets/AgainC.css";
 import Navbar from "../Components/NavBar";
 
-const ComplaintDetails = () => {
+const ComplaintDetails = ({ history }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [filePreview, setFilePreview] = useState(null);
   const [selectedValue, setSelectedValue] = useState(null);
-  const [form] = Form.useForm(); 
+  const [form] = Form.useForm();
   const { TextArea } = Input;
   const { Option } = Select;
 
   const [open, setOpen] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [secondModalOpen, setSecondModalOpen] = useState(false);
-  const [isFormValid, setIsFormValid] = useState(false); 
+  const [isFormValid, setIsFormValid] = useState(false);
 
   const showModal = () => {
-    if (isFormValid) { 
+    if (isFormValid) {
       setOpen(true);
     } else {
-      form.validateFields().then(() => {
-        setIsFormValid(true);
-      }).catch((errorInfo) => {
-        console.log("Validation failed:", errorInfo);
-      });
+      form
+        .validateFields()
+        .then(() => {
+          setIsFormValid(true);
+        })
+        .catch((errorInfo) => {
+          console.log("Validation failed:", errorInfo);
+        });
     }
   };
   const validateForm = () => {
-    form.validateFields().then(() => {
-      setIsFormValid(true);
-      showModal(); 
-    }).catch((errorInfo) => {
-      console.log("Validation failed:", errorInfo);
-    });
+    form
+      .validateFields()
+      .then(() => {
+        setIsFormValid(true);
+        showModal();
+      })
+      .catch((errorInfo) => {
+        console.log("Validation failed:", errorInfo);
+      });
   };
   const handleOk = () => {
     setConfirmLoading(true);
@@ -194,7 +203,7 @@ const ComplaintDetails = () => {
       </div>
 
       <div>
-      <div className="header-content mt-5" style={{ fontSize: "18px" }}>
+        <div className="header-content mt-5" style={{ fontSize: "18px" }}>
           Təkrar şikayət
         </div>
         <Form form={form}>
@@ -250,14 +259,22 @@ const ComplaintDetails = () => {
                       <i className="upload-icon fa fa-upload"></i>
                     )}
                   </label>
-                  <h6 className="file mt-2">{selectedFile ? selectedFile.name : 'Fayl əlavə et'}</h6>
+                  <h6 className="file mt-2">
+                    {selectedFile ? selectedFile.name : "Fayl əlavə et"}
+                  </h6>
                   {!selectedFile && (
                     <p className="uploadFileText">
-                      Faylları buraya əlavə edin. Faylın maksimum 10 MB həcmində, png, txt, jpeg, jpg, pdf
-                      formatında fayl əlavə edə bilərsiniz.
+                      Faylları buraya əlavə edin. Faylın maksimum 10 MB
+                      həcmində, png, txt, jpeg, jpg, pdf formatında fayl əlavə
+                      edə bilərsiniz.
                     </p>
                   )}
-                  <input id="file-upload" type="file" style={{ display: 'none' }} onChange={handleChange} />
+                  <input
+                    id="file-upload"
+                    type="file"
+                    style={{ display: "none" }}
+                    onChange={handleChange}
+                  />
                 </div>
               </Form.Item>
             </Col>
@@ -266,7 +283,7 @@ const ComplaintDetails = () => {
               <Button
                 type="primary"
                 htmlType="submit"
-                onClick={validateForm} 
+                onClick={validateForm}
                 style={{
                   width: "auto",
                   backgroundColor: selectedValue ? "#ce2029" : "grey",
@@ -279,7 +296,7 @@ const ComplaintDetails = () => {
               <Button
                 type="primary"
                 htmlType="submit"
-                onClick={validateForm} 
+                onClick={validateForm}
                 style={{
                   width: "auto",
                   backgroundColor: selectedValue ? "#3c6cb4" : "grey",
@@ -294,9 +311,12 @@ const ComplaintDetails = () => {
               visible={open}
               onCancel={handleCancel}
               footer={[
-                <Button key="ok" type="primary" onClick={handleOk}>
-                  OK
-                </Button>,
+                <Link to="/related">
+                  {" "}
+                  <Button key="ok" type="primary" onClick={handleOk}>
+                    OK
+                  </Button>
+                </Link>,
               ]}
             >
               <div

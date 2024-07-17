@@ -8,10 +8,6 @@ import New from "../Components/New";
 export default function App() {
   return (
     <div>
-      {/* <NavBar /> */}
-      {/* <NewComplaint/>  */}
-      {/* <Center/> */}
-      {/* <SideBar />  */}
       <New />
     </div>
   );

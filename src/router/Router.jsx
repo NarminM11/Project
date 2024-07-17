@@ -4,6 +4,9 @@ import HomePage from "../Pages/HomePage";
 import New from "../Components/New";
 import ComplaintInfo from '../Pages/ComplaintInfo';
 import ComplaintAgain from '../Pages/ComplaintAgain';
+import NExist from '../Pages/NotExistComplaint';
+import Related from "../Pages/RelatedComplaint";
+import AgainInfo from '../Pages/AgainComplaintInfo'
 import { Navigate } from 'react-router-dom';
 
 export const ROUTES = [
@@ -30,6 +33,18 @@ export const ROUTES = [
       {
         path: "again",
         element: <ComplaintAgain />,
+      },
+      {
+        path: "notexist",
+        element: <NExist />,
+      },
+      {
+        path: "related",
+        element: <Related />,
+      },
+      {
+        path: "againInfo",
+        element: <AgainInfo />,
       },
     ],
   },

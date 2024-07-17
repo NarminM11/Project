@@ -7,9 +7,6 @@ export default function HomePage() {
   return (
     <div className="homepage-layout">
       <SideBar />
-      {/* <div className="content">
-        <Outlet />
-      </div> */}
     </div>
   );
 }
